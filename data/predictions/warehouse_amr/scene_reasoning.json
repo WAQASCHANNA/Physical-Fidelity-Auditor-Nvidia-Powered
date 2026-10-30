@@ -1,0 +1,177 @@
+{
+  "status": "completed",
+  "task": "Isaac-Warehouse-AMR-Nav-v0",
+  "scenario": "warehouse_amr",
+  "model": "nvidia/Cosmos3-Super-Reasoner",
+  "hallucination_profile": "cosmos_default",
+  "scene_description": "Autonomous Mobile Robot (Robot 01, 45.0 kg) navigates a 3D warehouse aisle between Rack_A..C and Forklift_01 toward Goal_01 at 1.20 m/s using 360-degree Lidar_01 and front/rear RGB cameras.",
+  "manipulation_plan": [
+    "initial_contact",
+    "dynamic_evolution",
+    "steady_state"
+  ],
+  "injected_anomalies": [
+    {
+      "frame_index": 28,
+      "violation_type": "Contact constraints",
+      "description": "Frame 28: Robot_01 interpenetrates Rack_A / Pallet_02 bounding box (3D LiDAR SDF=-0.06m, lateral y=6.63m vs GT y=5.48m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 29,
+      "violation_type": "Contact constraints",
+      "description": "Frame 29: Robot_01 interpenetrates Rack_A / Pallet_02 bounding box (3D LiDAR SDF=-0.11m, lateral y=6.64m vs GT y=5.49m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 30,
+      "violation_type": "Contact constraints",
+      "description": "Frame 30: Robot_01 interpenetrates Rack_A / Pallet_02 bounding box (3D LiDAR SDF=-0.16m, lateral y=6.64m vs GT y=5.49m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 31,
+      "violation_type": "Contact constraints",
+      "description": "Frame 31: Robot_01 interpenetrates Rack_A / Pallet_02 bounding box (3D LiDAR SDF=-0.19m, lateral y=6.65m vs GT y=5.50m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 32,
+      "violation_type": "Contact constraints",
+      "description": "Frame 32: Robot_01 interpenetrates Rack_A / Pallet_02 bounding box (3D LiDAR SDF=-0.21m, lateral y=6.65m vs GT y=5.50m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 33,
+      "violation_type": "Contact constraints",
+      "description": "Frame 33: Robot_01 interpenetrates Rack_A / Pallet_02 bounding box (3D LiDAR SDF=-0.22m, lateral y=6.65m vs GT y=5.50m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 34,
+      "violation_type": "Contact constraints",
+      "description": "Frame 34: Robot_01 interpenetrates Rack_A / Pallet_02 bounding box (3D LiDAR SDF=-0.21m, lateral y=6.65m vs GT y=5.50m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 35,
+      "violation_type": "Contact constraints",
+      "description": "Frame 35: Robot_01 interpenetrates Rack_A / Pallet_02 bounding box (3D LiDAR SDF=-0.19m, lateral y=6.65m vs GT y=5.50m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 36,
+      "violation_type": "Contact constraints",
+      "description": "Frame 36: Robot_01 interpenetrates Rack_A / Pallet_02 bounding box (3D LiDAR SDF=-0.16m, lateral y=6.64m vs GT y=5.49m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 37,
+      "violation_type": "Contact constraints",
+      "description": "Frame 37: Robot_01 interpenetrates Rack_A / Pallet_02 bounding box (3D LiDAR SDF=-0.11m, lateral y=6.64m vs GT y=5.49m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 38,
+      "violation_type": "Contact constraints",
+      "description": "Frame 38: Robot_01 interpenetrates Rack_A / Pallet_02 bounding box (3D LiDAR SDF=-0.06m, lateral y=6.63m vs GT y=5.48m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 58,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 58: Robot_01 exhibits unphysical lateral skid & velocity surge (vx=4.00 m/s vs nominal 1.20 m/s on concrete mu=0.72).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 59,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 59: Robot_01 exhibits unphysical lateral skid & velocity surge (vx=4.00 m/s vs nominal 1.20 m/s on concrete mu=0.72).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 60,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 60: Robot_01 exhibits unphysical lateral skid & velocity surge (vx=4.00 m/s vs nominal 1.20 m/s on concrete mu=0.72).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 61,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 61: Robot_01 exhibits unphysical lateral skid & velocity surge (vx=4.00 m/s vs nominal 1.20 m/s on concrete mu=0.72).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 62,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 62: Robot_01 exhibits unphysical lateral skid & velocity surge (vx=4.00 m/s vs nominal 1.20 m/s on concrete mu=0.72).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 63,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 63: Robot_01 exhibits unphysical lateral skid & velocity surge (vx=4.00 m/s vs nominal 1.20 m/s on concrete mu=0.72).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 64,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 64: Robot_01 exhibits unphysical lateral skid & velocity surge (vx=4.00 m/s vs nominal 1.20 m/s on concrete mu=0.72).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 65,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 65: Robot_01 exhibits unphysical lateral skid & velocity surge (vx=4.00 m/s vs nominal 1.20 m/s on concrete mu=0.72).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 66,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 66: Robot_01 exhibits unphysical lateral skid & velocity surge (vx=4.00 m/s vs nominal 1.20 m/s on concrete mu=0.72).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 67,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 67: Robot_01 exhibits unphysical lateral skid & velocity surge (vx=4.00 m/s vs nominal 1.20 m/s on concrete mu=0.72).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 68,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 68: Robot_01 exhibits unphysical lateral skid & velocity surge (vx=4.00 m/s vs nominal 1.20 m/s on concrete mu=0.72).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 82,
+      "violation_type": "Object permanence",
+      "description": "Frame 82: Dynamic obstacle Forklift_01 / Robot_01 vanishes from Camera_Front & Lidar_01 scan.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 83,
+      "violation_type": "Object permanence",
+      "description": "Frame 83: Dynamic obstacle Forklift_01 / Robot_01 vanishes from Camera_Front & Lidar_01 scan.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 84,
+      "violation_type": "Object permanence",
+      "description": "Frame 84: Dynamic obstacle Forklift_01 / Robot_01 vanishes from Camera_Front & Lidar_01 scan.",
+      "severity": "HIGH"
+    }
+  ],
+  "analysis": {
+    "model": "nvidia/Cosmos3-Super-Reasoner",
+    "task_id": "Isaac-Warehouse-AMR-Nav-v0",
+    "scene_description": "Autonomous Mobile Robot (Robot 01, 45.0 kg) navigates a 3D warehouse aisle between Rack_A..C and Forklift_01 toward Goal_01 at 1.20 m/s using 360-degree Lidar_01 and front/rear RGB cameras.",
+    "predicted_stages": [
+      "initial_contact",
+      "dynamic_evolution",
+      "steady_state"
+    ],
+    "physical_priors_active": false,
+    "mode": "local_3d_world_emulator"
+  }
+}

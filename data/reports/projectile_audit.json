@@ -1,0 +1,170 @@
+{
+  "scenario": "projectile",
+  "overall_verdict": "FAIL",
+  "physics_hallucination_rate": 0.2277,
+  "physical_integrity_rating": 0.5974,
+  "temporal_consistency_score": 0.7603,
+  "kinetic_debt_joules": 93.367,
+  "total_frames": 101,
+  "violated_frames_count": 23,
+  "violations": [
+    {
+      "frame_index": 22,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 22: Unforced 3D momentum/energy surge (+5.2J over Isaac Lab ground truth, exceeding restitution limit e=0.68).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 23,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 23: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.18m; predicted z=1.22m vs GT z=1.05m).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 24,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 24: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.25m; predicted z=1.14m vs GT z=0.89m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 25,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 25: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.31m; predicted z=1.02m vs GT z=0.71m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 26,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 26: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.36m; predicted z=0.87m vs GT z=0.51m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 27,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 27: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.38m; predicted z=0.68m vs GT z=0.30m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 28,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 28: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.38m; predicted z=0.53m vs GT z=0.15m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 29,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 29: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.36m; predicted z=0.64m vs GT z=0.29m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 30,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 30: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.31m; predicted z=0.72m vs GT z=0.41m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 31,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 31: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.25m; predicted z=0.77m vs GT z=0.52m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 32,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 32: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.18m; predicted z=0.78m vs GT z=0.61m).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 33,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 33: Unforced 3D momentum/energy surge (+5.2J over Isaac Lab ground truth, exceeding restitution limit e=0.68).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 55,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 55: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.69m vs GT z=0.37m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 56,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 56: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.65m vs GT z=0.33m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 57,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 57: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.59m vs GT z=0.27m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 58,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 58: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.52m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 59,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 59: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.47m vs GT z=0.15m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 60,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 60: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.52m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 61,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 61: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.54m vs GT z=0.22m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 62,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 62: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.56m vs GT z=0.24m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 82,
+      "violation_type": "Object permanence",
+      "description": "Frame 82: Tracked 3D rigid body vanishes from predicted scene while present at 3D pose (x=11.43m, y=3.37m, z=0.15m) in Isaac Lab ground truth.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 83,
+      "violation_type": "Object permanence",
+      "description": "Frame 83: Tracked 3D rigid body vanishes from predicted scene while present at 3D pose (x=11.48m, y=3.38m, z=0.15m) in Isaac Lab ground truth.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 84,
+      "violation_type": "Object permanence",
+      "description": "Frame 84: Tracked 3D rigid body vanishes from predicted scene while present at 3D pose (x=11.53m, y=3.40m, z=0.15m) in Isaac Lab ground truth.",
+      "severity": "HIGH"
+    }
+  ],
+  "summary": "Scenario 'projectile' (cosmos_default) evaluated across 101 frames: verdict=FAIL with PHR=0.228, PIR=0.597, and Kinetic Debt=93.4J. Detected 23 violated frames across laws: Conservation of momentum, Gravity and free-fall behavior, Object permanence. Grounded against Tavily empirical constant for steel on concrete (nominal mu=0.45).",
+  "model_used": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B (local-physics-judge-fallback)",
+  "escalated_to_super": false,
+  "world_model_profile": "cosmos_default",
+  "tavily_grounding": {
+    "scenario": "projectile",
+    "query": "coefficient of restitution and friction steel on concrete physical constant",
+    "material_pair": "steel on concrete",
+    "empirical_friction_range": [
+      0.4,
+      0.55
+    ],
+    "recommended_friction": 0.45,
+    "recommended_restitution": 0.68,
+    "source": "https://en.wikipedia.org/wiki/Coefficient_of_restitution",
+    "content": "In classical mechanics, the coefficient of restitution (COR, also denoted by e), is a measure of the springiness of collisions between two surfaces. Newton's law of restitution states that the relative speed of separation of two surfaces immediately after a collision is directly proportional to the relative speed of approach of the surfaces immediately before the collision, the constant of proportionality being called the coefficient of restitution, a dimensionless parameter that is a property [...] {E_{\\text{k, (after impact)}}}{E_{\\text{k, (before impact)}}}}}={\\sqrt {\\frac {{\\frac {1}{2}}mv^{2}}{{\\frac {1}{2}}mu^{2}}}}={\\sqrt {\\frac {v^{2}}{u^{2}}}}={\\frac {v}{u}}}In a case where frictional forces can be neglected (nearly every student laboratory on this subject), and the object is dropped from rest onto a horizontal surface, the above is equivalent to a comparison between the Ep of the object at the drop height with that at the bounce height. In this case, the change in Ek is zero (the [...] 1687.{\\displaystyle {\\text{Coefficient  of  restitution }}(e)={\\frac {\\left|{\\text{Relative velocity of separation after collision}}\\right|}{\\left|{\\text{Relative velocity of approach before collision}}\\right|}}}",
+    "retrieval_mode": "tavily_live_api (disk_cache)",
+    "raw_results_count": 2
+  },
+  "audit_latency_seconds": 30.847
+}

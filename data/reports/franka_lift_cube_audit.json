@@ -1,0 +1,164 @@
+{
+  "scenario": "franka_lift_cube",
+  "overall_verdict": "FAIL",
+  "physics_hallucination_rate": 0.2178,
+  "physical_integrity_rating": 0.6021,
+  "temporal_consistency_score": 0.7638,
+  "kinetic_debt_joules": 70.4,
+  "total_frames": 101,
+  "violated_frames_count": 22,
+  "violations": [
+    {
+      "frame_index": 26,
+      "violation_type": "Contact constraints",
+      "description": "Predicted z = -0.055 m (clearance -0.055 m) indicating interpenetration of ground; violates contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 27,
+      "violation_type": "Contact constraints",
+      "description": "Predicted z = -0.103 m (clearance -0.103 m) indicating interpenetration of ground; violates contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 28,
+      "violation_type": "Contact constraints",
+      "description": "Predicted z = -0.139 m (clearance -0.139 m) indicating interpenetration of ground; violates contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 29,
+      "violation_type": "Contact constraints",
+      "description": "Predicted z = -0.158 m (clearance -0.158 m) indicating interpenetration of ground; violates contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 30,
+      "violation_type": "Contact constraints",
+      "description": "Predicted z = -0.158 m (clearance -0.158 m) indicating interpenetration of ground; violates contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 31,
+      "violation_type": "Contact constraints",
+      "description": "Predicted z = -0.139 m (clearance -0.139 m) indicating interpenetration of ground; violates contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 32,
+      "violation_type": "Contact constraints",
+      "description": "Predicted z = -0.103 m (clearance -0.103 m) indicating interpenetration of ground; violates contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 33,
+      "violation_type": "Contact constraints",
+      "description": "Predicted z = 0.025 m (clearance -0.055 m) still shows slight interpenetration; violates contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 52,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Predicted vertical velocity = 2.356 m/s vs ground truth 0.556 m/s; trajectory shows unrealistic upward acceleration inconsistent with gravity; violates gravity and free-fall behavior.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 53,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Predicted vertical velocity = 2.488 m/s vs ground truth 0.688 m/s; violates gravity and free-fall behavior.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 54,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Predicted vertical velocity = 2.608 m/s vs ground truth 0.808 m/s; violates gravity and free-fall behavior.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 55,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Predicted vertical velocity = 2.716 m/s vs ground truth 0.916 m/s; violates gravity and free-fall behavior.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 56,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Predicted vertical velocity = 2.812 m/s vs ground truth 1.012 m/s; violates gravity and free-fall behavior.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 57,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Predicted vertical velocity = 2.896 m/s vs ground truth 1.096 m/s; violates gravity and free-fall behavior.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 58,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Predicted vertical velocity = 2.968 m/s vs ground truth 1.168 m/s; violates gravity and free-fall behavior.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 59,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Predicted vertical velocity = 3.028 m/s vs ground truth 1.228 m/s; violates gravity and free-fall behavior.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 60,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Predicted vertical velocity = 3.076 m/s vs ground truth 1.276 m/s; violates gravity and free-fall behavior.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 61,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Predicted vertical velocity = 3.112 m/s vs ground truth 1.312 m/s; violates gravity and free-fall behavior.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 62,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Predicted vertical velocity = 3.136 m/s vs ground truth 1.336 m/s; violates gravity and free-fall behavior.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 84,
+      "violation_type": "Object permanence",
+      "description": "Object_visible flag false in prediction while ground truth shows true; violates object permanence.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 85,
+      "violation_type": "Object permanence",
+      "description": "Object_visible flag false in prediction while ground truth shows true; violates object permanence.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 86,
+      "violation_type": "Object permanence",
+      "description": "Object_visible flag false in prediction while ground truth shows true; violates object permanence.",
+      "severity": "HIGH"
+    }
+  ],
+  "summary": "The predicted trajectory exhibits a physics hallucination rate of ~0.218, indicating substantial physical implausibility. Dominant failure modes are contact constraint violations (penetration of the cube through the ground) and unrealistic gravity\u2011free\u2011fall dynamics (excessive upward velocities). Object permanence errors also appear when the cube disappears in later frames. While the recommended friction coefficient (0.65) aligns with the empirical range, the predicted behavior suggests inadequate damping and unrealistic energy dynamics, leading to a FAIL verdict.",
+  "model_used": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "escalated_to_super": false,
+  "world_model_profile": "cosmos_default",
+  "tavily_grounding": {
+    "scenario": "franka_lift_cube",
+    "query": "coefficient of static friction rubber on ABS plastic robotic gripper physical constant",
+    "material_pair": "rubber gripper pads on ABS plastic cube",
+    "empirical_friction_range": [
+      0.55,
+      0.75
+    ],
+    "recommended_friction": 0.65,
+    "recommended_restitution": 0.15,
+    "source": "https://eureka.patsnap.com/report-evaluate-friction-coefficients-of-silicon-based-robot-skins",
+    "content": "Apr 17, 2026 \u2014 The friction coefficient serves as a quantitative measure that directly influences a robot's ability to grasp objects, navigate surfaces, and\u00a0...Read more",
+    "retrieval_mode": "tavily_live_api",
+    "raw_results_count": 2
+  },
+  "audit_latency_seconds": 47.7889
+}

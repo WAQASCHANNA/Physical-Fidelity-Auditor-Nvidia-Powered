@@ -1,0 +1,17 @@
+# Secrets and local environment
+.env
+.venv/
+venv/
+ENV/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Generated simulation & audit artifacts (optional local cache)
+data/cache/
+*.zip
+
+

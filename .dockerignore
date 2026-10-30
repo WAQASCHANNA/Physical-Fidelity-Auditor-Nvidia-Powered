@@ -1,0 +1,12 @@
+# Never bake secrets or local virtual environments into the container image
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.git/
+.gitignore
+*.log
+

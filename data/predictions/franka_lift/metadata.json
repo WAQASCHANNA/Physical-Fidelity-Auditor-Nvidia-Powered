@@ -1,0 +1,16 @@
+{
+  "model_name": "nvidia/Cosmos3-Super-Reasoner",
+  "task": "Isaac-Lift-Cube-Franka-v0",
+  "hallucination_profile": "cosmos_default",
+  "inference_source": "cosmos_3d_structured_reasoner",
+  "endpoint": "https://api.tokenfactory.nebius.com/v1/",
+  "inference_params": {
+    "temperature": 0.15,
+    "max_tokens": 900,
+    "num_input_frames": 25
+  },
+  "input_path": "s3://physics-audit/ground_truth/franka_lift/frames/",
+  "output_path": "s3://physics-audit/predictions/franka_lift/",
+  "timestamp": "2026-10-30T18:01:08.450546+00:00",
+  "latency_seconds": 16.55
+}

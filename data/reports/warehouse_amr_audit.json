@@ -1,0 +1,182 @@
+{
+  "scenario": "warehouse_amr",
+  "overall_verdict": "FAIL",
+  "physics_hallucination_rate": 0.2475,
+  "physical_integrity_rating": 0.5809,
+  "temporal_consistency_score": 0.7534,
+  "kinetic_debt_joules": 715.0,
+  "total_frames": 101,
+  "violated_frames_count": 25,
+  "violations": [
+    {
+      "frame_index": 28,
+      "violation_type": "Contact constraints",
+      "description": "Frame 28: 3D mesh interpenetrates solid collider boundary by 0.06m (SDF=-0.06m, predicted z=0.23m vs Isaac Lab z=0.23m).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 29,
+      "violation_type": "Contact constraints",
+      "description": "Frame 29: 3D mesh interpenetrates solid collider boundary by 0.11m (SDF=-0.11m, predicted z=0.23m vs Isaac Lab z=0.23m).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 30,
+      "violation_type": "Contact constraints",
+      "description": "Frame 30: 3D mesh interpenetrates solid collider boundary by 0.16m (SDF=-0.16m, predicted z=0.23m vs Isaac Lab z=0.23m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 31,
+      "violation_type": "Contact constraints",
+      "description": "Frame 31: 3D mesh interpenetrates solid collider boundary by 0.19m (SDF=-0.19m, predicted z=0.23m vs Isaac Lab z=0.23m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 32,
+      "violation_type": "Contact constraints",
+      "description": "Frame 32: 3D mesh interpenetrates solid collider boundary by 0.21m (SDF=-0.21m, predicted z=0.23m vs Isaac Lab z=0.23m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 33,
+      "violation_type": "Contact constraints",
+      "description": "Frame 33: 3D mesh interpenetrates solid collider boundary by 0.22m (SDF=-0.22m, predicted z=0.23m vs Isaac Lab z=0.23m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 34,
+      "violation_type": "Contact constraints",
+      "description": "Frame 34: 3D mesh interpenetrates solid collider boundary by 0.21m (SDF=-0.21m, predicted z=0.23m vs Isaac Lab z=0.23m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 35,
+      "violation_type": "Contact constraints",
+      "description": "Frame 35: 3D mesh interpenetrates solid collider boundary by 0.19m (SDF=-0.19m, predicted z=0.23m vs Isaac Lab z=0.23m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 36,
+      "violation_type": "Contact constraints",
+      "description": "Frame 36: 3D mesh interpenetrates solid collider boundary by 0.16m (SDF=-0.16m, predicted z=0.23m vs Isaac Lab z=0.23m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 37,
+      "violation_type": "Contact constraints",
+      "description": "Frame 37: 3D mesh interpenetrates solid collider boundary by 0.11m (SDF=-0.11m, predicted z=0.23m vs Isaac Lab z=0.23m).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 38,
+      "violation_type": "Contact constraints",
+      "description": "Frame 38: 3D mesh interpenetrates solid collider boundary by 0.06m (SDF=-0.06m, predicted z=0.23m vs Isaac Lab z=0.23m).",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 58,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 58: Unforced 3D momentum/energy surge (+65.0J over Isaac Lab ground truth, exceeding restitution limit e=0.10).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 59,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 59: Unforced 3D momentum/energy surge (+65.0J over Isaac Lab ground truth, exceeding restitution limit e=0.10).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 60,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 60: Unforced 3D momentum/energy surge (+65.0J over Isaac Lab ground truth, exceeding restitution limit e=0.10).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 61,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 61: Unforced 3D momentum/energy surge (+65.0J over Isaac Lab ground truth, exceeding restitution limit e=0.10).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 62,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 62: Unforced 3D momentum/energy surge (+65.0J over Isaac Lab ground truth, exceeding restitution limit e=0.10).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 63,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 63: Unforced 3D momentum/energy surge (+65.0J over Isaac Lab ground truth, exceeding restitution limit e=0.10).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 64,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 64: Unforced 3D momentum/energy surge (+65.0J over Isaac Lab ground truth, exceeding restitution limit e=0.10).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 65,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 65: Unforced 3D momentum/energy surge (+65.0J over Isaac Lab ground truth, exceeding restitution limit e=0.10).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 66,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 66: Unforced 3D momentum/energy surge (+65.0J over Isaac Lab ground truth, exceeding restitution limit e=0.10).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 67,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 67: Unforced 3D momentum/energy surge (+65.0J over Isaac Lab ground truth, exceeding restitution limit e=0.10).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 68,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 68: Unforced 3D momentum/energy surge (+65.0J over Isaac Lab ground truth, exceeding restitution limit e=0.10).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 82,
+      "violation_type": "Object permanence",
+      "description": "Frame 82: Tracked 3D rigid body vanishes from predicted scene while present at 3D pose (x=15.86m, y=4.42m, z=0.23m) in Isaac Lab ground truth.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 83,
+      "violation_type": "Object permanence",
+      "description": "Frame 83: Tracked 3D rigid body vanishes from predicted scene while present at 3D pose (x=15.91m, y=4.40m, z=0.23m) in Isaac Lab ground truth.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 84,
+      "violation_type": "Object permanence",
+      "description": "Frame 84: Tracked 3D rigid body vanishes from predicted scene while present at 3D pose (x=15.95m, y=4.38m, z=0.23m) in Isaac Lab ground truth.",
+      "severity": "HIGH"
+    }
+  ],
+  "summary": "Scenario 'warehouse_amr' (cosmos_default) evaluated across 101 frames: verdict=FAIL with PHR=0.247, PIR=0.581, and Kinetic Debt=715.0J. Detected 25 violated frames across laws: Conservation of momentum, Contact constraints, Object permanence. Grounded against Tavily empirical constant for polyurethane AMR drive wheels on sealed warehouse concrete (nominal mu=0.72).",
+  "model_used": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B (local-physics-judge-fallback)",
+  "escalated_to_super": false,
+  "world_model_profile": "cosmos_default",
+  "tavily_grounding": {
+    "scenario": "warehouse_amr",
+    "query": "coefficient of kinetic friction polyurethane wheel on sealed concrete warehouse floor",
+    "material_pair": "polyurethane AMR drive wheels on sealed warehouse concrete",
+    "empirical_friction_range": [
+      0.6,
+      0.85
+    ],
+    "recommended_friction": 0.72,
+    "recommended_restitution": 0.1,
+    "source": "https://castercity.com/wp-content/uploads/2025/10/Rubber-Vs-Polyurethane-WhitePaper-V1.2.0.1.pdf",
+    "content": "\u2022 Phase boundaries deflect and blunt crack propagation\n\u2022 Effective wear resistance = Hard phase hardness + Soft phase toughness\nThis combination cannot be achieved in homogeneous rubber.\n7\n-- 7 of 23 --\n4.4 Coefficient of Friction Impact\nSliding friction coefficients:\n\u2022 Rubber on concrete: \u03bc \u2248 0.7\u20131.0 (high adhesion)\n\u2022 Polyurethane on concrete: \u03bc \u2248 0.4\u20130.6 (lower adhesion)\nLower friction reduces tangential forces during rolling and sliding, decreasing abrasive wear rate. [...] \u2022 Offer high resilience: Rapid recovery prevents repeated hammering\n6.2 Impact Force Transmission\nImpact scenario (wheel drops onto concrete):\nKinetic energy must be absorbed by wheel deformation OR transmitted to floor as damaging\nforce.\nForce-deflection relationship:\nFpeak = Ekinetic\n\u03b4deformation\nWhere smaller deformation (\u03b4) creates higher peak force.\nSoft rubber response:\n\u2022 Deep compression (8\u201312 mm deflection under impact)\n\u2022 Absorbs 80\u201390% of energy in elastic tire deformation [...] 6\n-- 6 of 23 --\n4 Abrasive Wear Resistance\n4.1 Wear Mechanisms\n\u2022 Two-body abrasion: Wheel slides on rough floor (concrete asperities)\n\u2022 Three-body abrasion: Loose particles (sand, metal filings) trapped between wheel and\nfloor\n4.2 Archard Wear Equation\nFundamental wear relationship:\nV = K \u00d7 Fn \u00d7 s\nH\nWhere:\n\u2022 V = wear volume\n\u2022 K = wear coefficient (material dependent)\n\u2022 Fn = normal force\n\u2022 s = sliding distance\n\u2022 H = hardness\nCritical insight: Wear inversely proportional to hardness.",
+    "retrieval_mode": "tavily_live_api (disk_cache)",
+    "raw_results_count": 2
+  },
+  "audit_latency_seconds": 16.9472
+}

@@ -1,0 +1,72 @@
+{
+  "scenario": "Isaac-Lift-Cube-Franka-v0",
+  "overall_verdict": "FAIL",
+  "physics_hallucination_rate": 0.8,
+  "physical_integrity_rating": 0.1,
+  "pir_grade": "F",
+  "pir_label": "Critical",
+  "pir_meaning": "Physical bankruptcy; trajectory violates fundamental causality.",
+  "temporal_consistency_score": 0.64,
+  "kinetic_debt_joules": 74.0,
+  "total_frames": 25,
+  "violated_frames_count": 5,
+  "total_plan_steps": 5,
+  "violated_plan_steps": 4,
+  "violations": [
+    {
+      "plan_step": 1,
+      "frame_index": 1,
+      "violation_type": "contact_constraint",
+      "description": "Predicted pre-grasp stage shows SDF clearance of -0.133 m, indicating the gripper fingers interpenetrate the table and cube, violating contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "plan_step": 2,
+      "frame_index": 2,
+      "violation_type": "friction_slipping",
+      "description": "Grasp force is 0.0 N, far below the required 0.755 N to prevent slipping, given mass 0.1 kg and friction coefficient 0.65.",
+      "severity": "HIGH"
+    },
+    {
+      "plan_step": 3,
+      "frame_index": 3,
+      "violation_type": "gravity_support",
+      "description": "Cube is shown levitating +0.24 m ahead of open gripper without any contact force, contradicting gravity support.",
+      "severity": "HIGH"
+    },
+    {
+      "plan_step": 3,
+      "frame_index": 3,
+      "violation_type": "momentum_conservation",
+      "description": "The levitation implies an instantaneous velocity change without external force, violating conservation of momentum.",
+      "severity": "MEDIUM"
+    },
+    {
+      "plan_step": 4,
+      "frame_index": 4,
+      "violation_type": "object_permanence",
+      "description": "Object visibility becomes false (flickers out) in hold phase, indicating the cube disappears and re\u2011appears, violating object permanence.",
+      "severity": "MEDIUM"
+    }
+  ],
+  "summary": "The predicted manipulation plan contains multiple physical impossibilities: interpenetration during pre\u2011grasp, insufficient grasp force leading to slipping, levitation without support violating gravity and momentum conservation, and loss of object visibility breaking permanence. All stages exhibit violations, resulting in a FAIL verdict.",
+  "model_used": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "escalated_to_super": false,
+  "world_model_profile": "cosmos_default",
+  "tavily_grounding": {
+    "scenario": "franka_lift_cube",
+    "query": "coefficient of static friction rubber on ABS plastic robotic gripper physical constant",
+    "material_pair": "rubber gripper pads on ABS plastic cube",
+    "empirical_friction_range": [
+      0.55,
+      0.75
+    ],
+    "recommended_friction": 0.65,
+    "recommended_restitution": 0.15,
+    "source": "https://eureka.patsnap.com/report-evaluate-friction-coefficients-of-silicon-based-robot-skins",
+    "content": "Apr 17, 2026 \u2014 The friction coefficient serves as a quantitative measure that directly influences a robot's ability to grasp objects, navigate surfaces, and\u00a0...Read more",
+    "retrieval_mode": "tavily_live_api (disk_cache)",
+    "raw_results_count": 2
+  },
+  "audit_latency_seconds": 19.2053
+}

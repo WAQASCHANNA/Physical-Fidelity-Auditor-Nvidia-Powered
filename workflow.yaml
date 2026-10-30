@@ -1,0 +1,129 @@
+name: physics-audit-3d-pipeline
+version: "2.0"
+description: >
+  Three-tier 3D Physical Fidelity Auditor pipeline deployed on Nebius Serverless AI.
+  Tier 1: NVIDIA Isaac Lab 3D Ground Truth Simulation (Isaac-Lift-Cube-Franka-v0, 3D Block Stack, 3D Projectile, 3D Ramp)
+  Tier 2: NVIDIA Cosmos 3 (nvidia/Cosmos3-Super-Reasoner & Cosmos-Predict2.5) 3D World Model Prediction
+  Tier 3: NVIDIA Nemotron (nvidia/Nemotron-3-Nano-30B-A3B on Token Factory) + Tavily 3D Physics Audit
+
+environment:
+  TOKEN_FACTORY_URL: "https://api.tokenfactory.nebius.com/v1/"
+  NEMOTRON_NANO_MODEL: "nvidia/Nemotron-3-Nano-30B-A3B"
+  NEMOTRON_SUPER_MODEL: "nvidia/Llama-3_3-Nemotron-Super-49B-v1"
+  COSMOS_REASONER_MODEL: "nvidia/Cosmos3-Super-Reasoner"
+  S3_BUCKET: "s3://physics-audit"
+
+scenarios:
+  - franka_lift_cube
+  - block_stack
+  - projectile
+  - ramp_roll
+
+stages:
+  - name: ground-truth-franka-lift-cube
+    tool: isaac-lab
+    service: nebius-serverless-job
+    gpu: "L40S-1x"
+    auto_terminate: true
+    command: train
+    args:
+      - "--task"
+      - "Isaac-Lift-Cube-Franka-v0"
+      - "--scenario"
+      - "franka_lift_cube"
+      - "--num-frames"
+      - "101"
+      - "--output"
+      - "s3://physics-audit/ground_truth/franka_lift_cube/"
+
+  - name: ground-truth-block-stack-3d
+    tool: isaac-lab
+    service: nebius-serverless-job
+    gpu: "L40S-1x"
+    auto_terminate: true
+    command: run
+    args:
+      - "--task"
+      - "Isaac-Stack-Block-3D-v0"
+      - "--scenario"
+      - "block_stack"
+      - "--num-frames"
+      - "101"
+      - "--output"
+      - "s3://physics-audit/ground_truth/block_stack/"
+
+  - name: ground-truth-projectile-3d
+    tool: isaac-lab
+    service: nebius-serverless-job
+    gpu: "L40S-1x"
+    auto_terminate: true
+    command: run
+    args:
+      - "--task"
+      - "Isaac-Projectile-3D-v0"
+      - "--scenario"
+      - "projectile"
+      - "--num-frames"
+      - "101"
+      - "--output"
+      - "s3://physics-audit/ground_truth/projectile/"
+
+  - name: ground-truth-ramp-roll-3d
+    tool: isaac-lab
+    service: nebius-serverless-job
+    gpu: "L40S-1x"
+    auto_terminate: true
+    command: run
+    args:
+      - "--task"
+      - "Isaac-Ramp-Roll-3D-v0"
+      - "--scenario"
+      - "ramp_roll"
+      - "--num-frames"
+      - "101"
+      - "--output"
+      - "s3://physics-audit/ground_truth/ramp_roll/"
+
+  - name: cosmos-3d-prediction
+    tool: cosmos
+    service: nebius-token-factory
+    model: "nvidia/Cosmos3-Super-Reasoner"
+    depends_on:
+      - ground-truth-franka-lift-cube
+      - ground-truth-block-stack-3d
+      - ground-truth-projectile-3d
+      - ground-truth-ramp-roll-3d
+    command: predict
+    args:
+      - "--input"
+      - "s3://physics-audit/ground_truth/"
+      - "--output"
+      - "s3://physics-audit/predictions/"
+
+  - name: nemotron-3d-physics-audit
+    tool: nemotron
+    service: nebius-token-factory
+    model: "nvidia/Nemotron-3-Nano-30B-A3B"
+    escalation_model: "nvidia/Llama-3_3-Nemotron-Super-49B-v1"
+    depends_on:
+      - cosmos-3d-prediction
+    command: audit
+    args:
+      - "--ground-truth-dir"
+      - "s3://physics-audit/ground_truth/"
+      - "--predictions-dir"
+      - "s3://physics-audit/predictions/"
+      - "--output"
+      - "s3://physics-audit/reports/"
+
+  - name: demo-dashboard
+    tool: streamlit
+    service: nebius-serverless-endpoint
+    port: 8501
+    depends_on:
+      - nemotron-3d-physics-audit
+    command: serve
+    args:
+      - "dashboard/app.py"
+      - "--server.port=8501"
+      - "--server.address=0.0.0.0"

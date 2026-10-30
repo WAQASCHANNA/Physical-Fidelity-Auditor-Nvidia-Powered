@@ -1,0 +1,33 @@
+{
+  "model_name": "nvidia/Cosmos3-Super-Reasoner",
+  "world_generator": "nvidia/Cosmos-Predict2.5-3D",
+  "version": "3.0.0",
+  "dimension": "3D",
+  "workbench": "cosmos-3d-token-factory-emulator",
+  "scenario": "franka_lift_cube",
+  "isaac_task_id": "Isaac-Lift-Cube-Franka-v0",
+  "hallucination_profile": "cosmos_default",
+  "profile_label": "Cosmos-Predict2.5 / Cosmos 3 Baseline (Unconstrained 3D Rollout)",
+  "cosmos_scene_reasoning": {
+    "model": "nvidia/Cosmos3-Super-Reasoner",
+    "task_id": "Isaac-Lift-Cube-Franka-v0",
+    "scene_description": "A 7-DOF Franka Emika Panda robotic arm approaches, grasps, and lifts a 0.10 kg 3D rigid cube (6 cm edge) from a worktable to a 3D target goal pose. Tests 3D gripper-cube contact constraints, frictional grasp closure (F_n >= mg / 2*mu), gravity during lift, and object permanence.",
+    "predicted_stages": [
+      "approach",
+      "pre_grasp",
+      "grasp",
+      "lift",
+      "hold"
+    ],
+    "physical_priors_active": false,
+    "mode": "local_3d_world_emulator"
+  },
+  "inference_params": {
+    "num_frames": 101,
+    "fps": 25,
+    "conditioning_frames": 4,
+    "guidance_scale": 7.0,
+    "seed": 42
+  },
+  "ground_truth_reference": "E:\\Physical Fidleity Auditor\\data\\ground_truth\\franka_lift_cube"
+}

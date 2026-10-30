@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physical Fidelity Auditor (physics-audit) — Workflow Architecture</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    body {
+      background-color: #0b0d11;
+      color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .surface-card {
+      background-color: #131722;
+      border-color: #262c3a;
+    }
+    .surface-bg {
+      background-color: #0b0d11;
+      border-color: #262c3a;
+    }
+    .tier-card {
+      transition: all 0.2s ease;
+    }
+    .tier-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="antialiased p-6 space-y-6 max-w-7xl mx-auto">
+
+  <!-- Header Banner -->
+  <div class="surface-card border rounded-2xl p-6 shadow-sm">
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">TRACK: PHYSICAL AI</span>
+          <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-500/15 text-sky-400 border border-sky-500/30">NEBIUS TOKEN FACTORY</span>
+          <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-purple-500/15 text-purple-400 border border-purple-500/30">MIT LICENSE</span>
+        </div>
+        <h1 class="text-2xl font-bold tracking-tight text-white">Physical Fidelity Auditor (<code>physics-audit</code>) — Workflow Architecture</h1>
+        <p class="text-sm text-gray-400 mt-1">
+          End-to-End 4-Tier 3D Physical Consistency Benchmark: NVIDIA Isaac Lab Oracle → NVIDIA Cosmos 3 Reasoner → NVIDIA Nemotron 3 + Tavily Judge → Nebius Serverless 3D Studio
+        </p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="setTab('pipeline')" id="tabBtn-pipeline" class="px-3.5 py-2 rounded-lg text-xs font-semibold border border-emerald-500/40 bg-emerald-500/20 text-emerald-400">1. 4-Tier Pipeline</button>
+        <button onclick="setTab('sequence')" id="tabBtn-sequence" class="px-3.5 py-2 rounded-lg text-xs font-semibold border border-gray-700 surface-card text-gray-400">2. Data Contracts & JSON</button>
+        <button onclick="setTab('sipa')" id="tabBtn-sipa" class="px-3.5 py-2 rounded-lg text-xs font-semibold border border-gray-700 surface-card text-gray-400">3. SIPA PIR Calculator</button>
+        <button onclick="setTab('deploy')" id="tabBtn-deploy" class="px-3.5 py-2 rounded-lg text-xs font-semibold border border-gray-700 surface-card text-gray-400">4. Nebius Cloud Topology</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 1: Interactive 4-Tier Pipeline Explorer -->
+  <div id="tab-pipeline" class="space-y-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <!-- Tier 1 -->
+      <div onclick="selectTier(1)" id="tierCard-1" class="tier-card cursor-pointer surface-card border-2 border-emerald-500 rounded-xl p-4 shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">TIER 1 • ORACLE</span>
+          <span class="px-2 py-0.5 rounded text-xs font-medium bg-emerald-500/15 text-emerald-400">GPU / Solver</span>
+        </div>
+        <h3 class="text-base font-bold text-white">NVIDIA Isaac Lab 3D</h3>
+        <p class="text-xs text-gray-400 mt-1">Generates deterministic 3D ground-truth RGB/Depth frames, SDF clearances & physical metadata.</p>
+        <div class="mt-3 pt-3 border-t border-gray-800 text-xs space-y-1 text-gray-400">
+          <div><strong class="text-gray-200">Module:</strong> <code>ground_truth/</code></div>
+          <div><strong class="text-gray-200">Task:</strong> <code>Isaac-Lift-Cube-Franka-v0</code></div>
+          <div><strong class="text-gray-200">Output:</strong> <code>25 PNGs + metadata.json</code></div>
+        </div>
+      </div>
+
+      <!-- Tier 2 -->
+      <div onclick="selectTier(2)" id="tierCard-2" class="tier-card cursor-pointer surface-card border rounded-xl p-4 shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-400">TIER 2 • WORLD MODEL</span>
+          <span class="px-2 py-0.5 rounded text-xs font-medium bg-sky-500/15 text-sky-400">Token Factory</span>
+        </div>
+        <h3 class="text-base font-bold text-white">NVIDIA Cosmos 3</h3>
+        <p class="text-xs text-gray-400 mt-1">Ingests ground-truth keyframes to synthesize predicted 3D manipulation plans ("dreams").</p>
+        <div class="mt-3 pt-3 border-t border-gray-800 text-xs space-y-1 text-gray-400">
+          <div><strong class="text-gray-200">Module:</strong> <code>npa/ & world_model/</code></div>
+          <div><strong class="text-gray-200">Model:</strong> <code>Cosmos3-Super-Reasoner</code></div>
+          <div><strong class="text-gray-200">Output:</strong> <code>scene_reasoning.json</code></div>
+        </div>
+      </div>
+
+      <!-- Tier 3 -->
+      <div onclick="selectTier(3)" id="tierCard-3" class="tier-card cursor-pointer surface-card border rounded-xl p-4 shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-400">TIER 3 • PHYSICS JUDGE</span>
+          <span class="px-2 py-0.5 rounded text-xs font-medium bg-amber-500/15 text-amber-400">JSON Mode + Tavily</span>
+        </div>
+        <h3 class="text-base font-bold text-white">Nemotron 3 + Tavily</h3>
+        <p class="text-xs text-gray-400 mt-1">Grounds friction via Tavily & audits 5 Newtonian laws to compute PHR & SIPA PIR Grade.</p>
+        <div class="mt-3 pt-3 border-t border-gray-800 text-xs space-y-1 text-gray-400">
+          <div><strong class="text-gray-200">Module:</strong> <code>auditor/nemotron_client.py</code></div>
+          <div><strong class="text-gray-200">Judge:</strong> <code>Nemotron-3-Nano-30B-A3B</code></div>
+          <div><strong class="text-gray-200">Output:</strong> <code>franka_lift_audit.json</code></div>
+        </div>
+      </div>
+
+      <!-- Tier 4 -->
+      <div onclick="selectTier(4)" id="tierCard-4" class="tier-card cursor-pointer surface-card border rounded-xl p-4 shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-purple-400">TIER 4 • LIVE STUDIO</span>
+          <span class="px-2 py-0.5 rounded text-xs font-medium bg-purple-500/15 text-purple-400">Port 8501 HTTP</span>
+        </div>
+        <h3 class="text-base font-bold text-white">3D Simulation Studio</h3>
+        <p class="text-xs text-gray-400 mt-1">Interactive Omniverse-style 3D viewport, LiDAR/Camera feeds & live audit console on Nebius.</p>
+        <div class="mt-3 pt-3 border-t border-gray-800 text-xs space-y-1 text-gray-400">
+          <div><strong class="text-gray-200">Module:</strong> <code>dashboard/app.py</code></div>
+          <div><strong class="text-gray-200">Infra:</strong> <code>Nebius Serverless Endpoint</code></div>
+          <div><strong class="text-gray-200">Preset:</strong> <code>cpu-d3 (4vCPU / 16GB)</code></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailed Inspector for Selected Tier -->
+    <div id="tierDetailBox" class="surface-card border rounded-2xl p-6 shadow-sm"></div>
+
+    <!-- 5 3D Benchmark Scenarios Matrix -->
+    <div class="surface-card border rounded-2xl p-6 shadow-sm">
+      <h2 class="text-lg font-bold text-white mb-1">3D Physical Benchmark Scenarios (<code>ground_truth/scenarios.py</code>)</h2>
+      <p class="text-xs text-gray-400 mb-4">Complete suite of 3D manipulation, mobile robotics, and rigid-body benchmarks evaluated by Physical Fidelity Auditor.</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="border-b border-gray-800 text-gray-400">
+              <th class="py-2.5 px-3">Scenario Key</th>
+              <th class="py-2.5 px-3">Isaac Lab Task ID</th>
+              <th class="py-2.5 px-3">Mass / Friction (μ_s)</th>
+              <th class="py-2.5 px-3">Primary Physical Laws Audited</th>
+              <th class="py-2.5 px-3">Cosmos Default Verdict</th>
+              <th class="py-2.5 px-3">PHR / PIR Grade</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-800">
+            <tr class="hover:bg-emerald-500/5">
+              <td class="py-2.5 px-3 font-mono font-semibold text-emerald-400">franka_lift_cube</td>
+              <td class="py-2.5 px-3 font-mono">Isaac-Lift-Cube-Franka-v0</td>
+              <td class="py-2.5 px-3">0.10 kg • μ = 0.65 (Rubber/ABS)</td>
+              <td class="py-2.5 px-3">Table SDF ≥ 0, Force-closure (F_n ≥ 0.755 N), Permanence</td>
+              <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-bold">FAIL</span></td>
+              <td class="py-2.5 px-3 font-mono">PHR: 0.800 • PIR: 0.100 (Grade F)</td>
+            </tr>
+            <tr class="hover:bg-emerald-500/5">
+              <td class="py-2.5 px-3 font-mono font-semibold text-sky-400">warehouse_amr</td>
+              <td class="py-2.5 px-3 font-mono">Isaac-Warehouse-AMR-Nav-v0</td>
+              <td class="py-2.5 px-3">45.0 kg • μ = 0.72 (Rubber/Concrete)</td>
+              <td class="py-2.5 px-3">Rack/Forklift SDF clearance, Floor Z-support, Momentum</td>
+              <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-bold">FAIL</span></td>
+              <td class="py-2.5 px-3 font-mono">PHR: 0.158 • PIR: 0.612 (Grade C)</td>
+            </tr>
+            <tr class="hover:bg-emerald-500/5">
+              <td class="py-2.5 px-3 font-mono font-semibold text-amber-400">block_stack</td>
+              <td class="py-2.5 px-3 font-mono">Isaac-Stack-Block-3D-v0</td>
+              <td class="py-2.5 px-3">2.50 kg • μ = 0.40 (Wood/Wood)</td>
+              <td class="py-2.5 px-3">Cantilever torque toppling (Δx = 0.34m > 0.25m), Floor SDF</td>
+              <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-bold">FAIL</span></td>
+              <td class="py-2.5 px-3 font-mono">PHR: 0.198 • PIR: 0.584 (Grade C)</td>
+            </tr>
+            <tr class="hover:bg-emerald-500/5">
+              <td class="py-2.5 px-3 font-mono font-semibold text-purple-400">projectile</td>
+              <td class="py-2.5 px-3 font-mono">Isaac-Projectile-3D-v0</td>
+              <td class="py-2.5 px-3">0.80 kg • e = 0.68 (Steel/Concrete)</td>
+              <td class="py-2.5 px-3">3D parabolic trajectory (a_z = -g), Restitution energy decay</td>
+              <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-bold">FAIL</span></td>
+              <td class="py-2.5 px-3 font-mono">PHR: 0.178 • PIR: 0.595 (Grade C)</td>
+            </tr>
+            <tr class="hover:bg-emerald-500/5">
+              <td class="py-2.5 px-3 font-mono font-semibold text-pink-400">ramp_roll</td>
+              <td class="py-2.5 px-3 font-mono">Isaac-Ramp-Roll-3D-v0</td>
+              <td class="py-2.5 px-3">1.00 kg • μ = 0.50 (Rubber/Wood 25°)</td>
+              <td class="py-2.5 px-3">Inclined plane roll acceleration, Ramp surface non-penetration</td>
+              <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-bold">FAIL</span></td>
+              <td class="py-2.5 px-3 font-mono">PHR: 0.168 • PIR: 0.604 (Grade C)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 2: JSON Data Contracts -->
+  <div id="tab-sequence" class="hidden space-y-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="surface-card border rounded-xl p-4">
+        <div class="text-xs font-bold text-emerald-400 mb-1">ARTIFACT 1 • GROUND TRUTH ORACLE</div>
+        <div class="text-sm font-semibold mb-2"><code>data/ground_truth/franka_lift/metadata.json</code></div>
+        <pre class="text-xs font-mono p-3 rounded-lg surface-bg border overflow-x-auto">{
+  "task": "Isaac-Lift-Cube-Franka-v0",
+  "scenario": "franka_lift",
+  "mass": 0.1,
+  "object_mass": 0.1,
+  "friction": 0.65,
+  "friction_coefficient": 0.65,
+  "restitution": 0.15,
+  "num_frames": 25,
+  "stages": [
+    "approach",
+    "pre-grasp",
+    "grasp",
+    "lift",
+    "hold"
+  ]
+}</pre>
+      </div>
+
+      <div class="surface-card border rounded-xl p-4">
+        <div class="text-xs font-bold text-sky-400 mb-1">ARTIFACT 2 • COSMOS 3 PREDICTION</div>
+        <div class="text-sm font-semibold mb-2"><code>data/predictions/franka_lift/scene_reasoning.json</code></div>
+        <pre class="text-xs font-mono p-3 rounded-lg surface-bg border overflow-x-auto">{
+  "status": "completed",
+  "model": "nvidia/Cosmos3-Super-Reasoner",
+  "task": "Isaac-Lift-Cube-Franka-v0",
+  "manipulation_plan": [
+    {"step": 0, "stage": "approach", "predicted_sdf_clearance_m": 0.18},
+    {"step": 1, "stage": "pre-grasp", "predicted_sdf_clearance_m": -0.133},
+    {"step": 2, "stage": "grasp", "predicted_grasp_force_n": 0.0},
+    {"step": 3, "stage": "lift", "predicted_cube_z_m": 0.435, "predicted_grasp_force_n": 0.0},
+    {"step": 4, "stage": "hold", "object_visible": false}
+  ]
+}</pre>
+      </div>
+
+      <div class="surface-card border rounded-xl p-4">
+        <div class="text-xs font-bold text-amber-400 mb-1">ARTIFACT 3 • NEMOTRON 3 AUDIT REPORT</div>
+        <div class="text-sm font-semibold mb-2"><code>data/reports/franka_lift_audit.json</code></div>
+        <pre class="text-xs font-mono p-3 rounded-lg surface-bg border overflow-x-auto">{
+  "scenario": "Isaac-Lift-Cube-Franka-v0",
+  "overall_verdict": "FAIL",
+  "physics_hallucination_rate": 0.8,
+  "physical_integrity_rating": 0.1,
+  "pir_grade": "F",
+  "pir_label": "Critical",
+  "model_used": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "violations": [
+    {"plan_step": 1, "violation_type": "contact_constraint", "severity": "HIGH"},
+    {"plan_step": 2, "violation_type": "friction_slipping", "severity": "HIGH"},
+    {"plan_step": 3, "violation_type": "gravity_support", "severity": "HIGH"},
+    {"plan_step": 4, "violation_type": "object_permanence", "severity": "MEDIUM"}
+  ]
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 3: Interactive SIPA Calculator -->
+  <div id="tab-sipa" class="hidden space-y-6">
+    <div class="surface-card border rounded-2xl p-6 shadow-sm">
+      <h2 class="text-lg font-bold text-white mb-1">Interactive SIPA Physics Hallucination Rate (PHR) & Physical Integrity Rating (PIR) Simulator</h2>
+      <p class="text-xs text-gray-400 mb-5">Adjust the sliders to simulate how violated manipulation steps, severity weights, and unphysical kinetic debt map to SIPA PIR Grades (A / C / F) in <code>auditor/schemas.py</code>.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between text-xs font-semibold mb-1">
+              <span>Violated Plan Steps / Frames Ratio (PHR)</span>
+              <span id="lbl-phr" class="font-mono text-emerald-400">0.80</span>
+            </div>
+            <input type="range" id="rng-phr" min="0" max="100" value="80" oninput="updateSipaCalc()" class="w-full accent-emerald-500" />
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs font-semibold mb-1">
+              <span>Mean Violation Severity Weight (LOW=0.35, MED=0.70, HIGH=1.00)</span>
+              <span id="lbl-sev" class="font-mono text-sky-400">0.85</span>
+            </div>
+            <input type="range" id="rng-sev" min="0" max="100" value="85" oninput="updateSipaCalc()" class="w-full accent-sky-500" />
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs font-semibold mb-1">
+              <span>Cumulative Kinetic Debt (Joules)</span>
+              <span id="lbl-debt" class="font-mono text-amber-400">74.0 J</span>
+            </div>
+            <input type="range" id="rng-debt" min="0" max="100" value="74" oninput="updateSipaCalc()" class="w-full accent-amber-500" />
+          </div>
+        </div>
+
+        <div class="surface-bg border rounded-xl p-5 flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-xs text-gray-400 uppercase font-semibold">Computed SIPA Verdict</div>
+              <div id="out-verdict" class="text-2xl font-extrabold text-red-400 mt-0.5">FAIL (Grade F — Critical)</div>
+            </div>
+            <div id="out-badge" class="w-14 h-14 rounded-xl flex items-center justify-center text-2xl font-black bg-red-500/20 text-red-400 border border-red-500/40">F</div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 my-4">
+            <div class="p-3 rounded-lg surface-card border">
+              <div class="text-xs text-gray-400">Physics Hallucination Rate</div>
+              <div id="out-phr" class="text-xl font-bold font-mono mt-0.5">0.800</div>
+            </div>
+            <div class="p-3 rounded-lg surface-card border">
+              <div class="text-xs text-gray-400">Physical Integrity Rating (PIR)</div>
+              <div id="out-pir" class="text-xl font-bold font-mono mt-0.5">0.214</div>
+            </div>
+          </div>
+
+          <div id="out-meaning" class="text-xs text-gray-400 italic">
+            Physical bankruptcy; trajectory violates fundamental causality.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 4: Nebius Serverless Deployment Topology -->
+  <div id="tab-deploy" class="hidden space-y-6">
+    <div class="surface-card border rounded-2xl p-6 shadow-sm space-y-4">
+      <h2 class="text-lg font-bold text-white">Step 6: Containerization & Nebius AI Serverless Endpoint Deployment</h2>
+      <p class="text-xs text-gray-400">Production container workflow using <code>Dockerfile</code>, <code>nebius registry configure-docker</code>, and <code>nebius ai endpoint create</code>.</p>
+      <pre class="text-xs font-mono p-4 rounded-xl surface-bg border overflow-x-auto"># 1. Authenticate Docker with Nebius Container Registry
+nebius registry configure-docker
+
+# 2. Build, tag, and push the Streamlit 3D Simulation Studio image
+docker build -t physics-auditor:v1 .
+docker tag physics-auditor:v1 &lt;your-registry-id&gt;/physics-auditor:v1
+docker push &lt;your-registry-id&gt;/physics-auditor:v1
+
+# 3. Deploy as a managed HTTPS Nebius Serverless Endpoint on port 8501
+nebius ai endpoint create \
+  --name physics-fidelity-auditor \
+  --image &lt;your-registry-id&gt;/physics-auditor:v1 \
+  --container-port 8501 \
+  --platform cpu-d3 \
+  --preset 4vcpu-16gb \
+  --public \
+  --env NEBIUS_TOKEN_FACTORY_KEY=$NEBIUS_TOKEN_FACTORY_KEY \
+  --env TAVILY_API_KEY=$TAVILY_API_KEY</pre>
+    </div>
+  </div>
+
+  <script>
+    const tierDetails = {
+      1: {
+        badge: "TIER 1 • GROUND TRUTH ORACLE (NVIDIA ISAAC LAB)",
+        color: "text-emerald-400",
+        title: "3D Rigid-Body & Franka Manipulation Ground Truth Generation",
+        desc: "Executes scripted 3D robotic manipulation (Isaac-Lift-Cube-Franka-v0) and warehouse navigation scenarios with exact physical parameters (mass, static friction μ_s, restitution e, and Signed Distance Field clearance SDF ≥ 0).",
+        files: ["ground_truth/scenarios.py", "ground_truth/capture_isaac_lab_scene_frames.py", "ground_truth/run_isaac_lab.sh"],
+        cmd: "python ground_truth/capture_isaac_lab_scene_frames.py --task Isaac-Lift-Cube-Franka-v0 --num-frames 25 --output-dir data/ground_truth/franka_lift/frames",
+        outputs: ["data/ground_truth/franka_lift/frames/frame_00.png .. frame_24.png", "data/ground_truth/franka_lift/metadata.json", "data/ground_truth/franka_lift_cube/trajectory.csv"]
+      },
+      2: {
+        badge: "TIER 2 • 3D WORLD FOUNDATION MODEL (NVIDIA COSMOS 3)",
+        color: "text-sky-400",
+        title: "Scene Reasoning & 3D Manipulation Plan Synthesis via Nebius Token Factory",
+        desc: "Streams the 5-stage Isaac Lab keyframes (approach, pre-grasp, grasp, lift, hold) to nvidia/Cosmos3-Super-Reasoner on Nebius Token Factory to generate a structured 3D scene description and predicted manipulation plan ('the dream').",
+        files: ["npa/workbench/token_factory.py", "npa/cli.py", "world_model/predictor.py"],
+        cmd: "python -m npa.cli workbench cosmos token-factory reason --input-uri data/ground_truth/franka_lift/frames --output-dir data/predictions/franka_lift --model nvidia/Cosmos3-Super-Reasoner",
+        outputs: ["data/predictions/franka_lift/scene_reasoning.json", "data/predictions/franka_lift/metadata.json", "data/predictions/*/trajectory.csv"]
+      },
+      3: {
+        badge: "TIER 3 • AUTOMATED PHYSICS JUDGE (NVIDIA NEMOTRON 3 + TAVILY)",
+        color: "text-amber-400",
+        title: "Real-World Tribology Grounding & 5-Law Newtonian Constraint Auditing",
+        desc: "Queries Tavily Search API for empirical static friction coefficients (μ_s = 0.65 for rubber gripper pads on ABS plastic) and prompts nvidia/Nemotron-3-Nano-30B-A3B in JSON mode to audit contact_constraint, friction_slipping, gravity_support, momentum_conservation, and object_permanence.",
+        files: ["auditor/nemotron_client.py", "auditor/prompt_templates.py", "auditor/tavily_client.py", "auditor/schemas.py"],
+        cmd: "python -m auditor.nemotron_client --ground-truth data/ground_truth/franka_lift/metadata.json --prediction data/predictions/franka_lift/scene_reasoning.json --output data/reports/franka_lift_audit.json",
+        outputs: ["data/reports/franka_lift_audit.json", "data/cache/tavily_cache.json"]
+      },
+      4: {
+        badge: "TIER 4 • INTERACTIVE 3D SIMULATION STUDIO (NEBIUS SERVERLESS ENDPOINT)",
+        color: "text-purple-400",
+        title: "Full-Screen Omniverse 3D Viewport, Multi-Sensor Dock & Live Audit Console",
+        desc: "Renders the 3D warehouse/manipulation viewport with real-time LiDAR ray sweeps, Front/Rear camera feeds, 2D occupancy minimap, Cosmos Dream hallucination toggle, and one-click live Nebius Token Factory auditing.",
+        files: ["dashboard/app.py", "Dockerfile", "nebius_jobs/deploy_endpoint.sh", "nebius_jobs/deploy_endpoint.ps1"],
+        cmd: "streamlit run dashboard/app.py --server.port=8501",
+        outputs: ["http://localhost:8501", "Nebius Serverless HTTPS Endpoint (:8501)"]
+      }
+    };
+
+    function selectTier(idx) {
+      for (let i = 1; i <= 4; i++) {
+        const el = document.getElementById('tierCard-' + i);
+        if (i === idx) {
+          el.className = "tier-card cursor-pointer surface-card border-2 border-emerald-500 rounded-xl p-4 shadow-sm";
+        } else {
+          el.className = "tier-card cursor-pointer surface-card border rounded-xl p-4 shadow-sm";
+        }
+      }
+      const d = tierDetails[idx];
+      document.getElementById('tierDetailBox').innerHTML = `
+        <div class="space-y-4">
+          <div>
+            <div class="text-xs font-bold uppercase ${d.color}">${d.badge}</div>
+            <h3 class="text-lg font-bold text-white mt-0.5">${d.title}</h3>
+            <p class="text-xs text-gray-400 mt-1 leading-relaxed">${d.desc}</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+            <div class="p-3.5 rounded-xl surface-bg border">
+              <div class="text-xs font-semibold text-gray-200 mb-1.5">Key Repository Modules</div>
+              <ul class="text-xs font-mono space-y-1 text-emerald-400">
+                ${d.files.map(f => `<li>• ${f}</li>`).join('')}
+              </ul>
+            </div>
+            <div class="p-3.5 rounded-xl surface-bg border">
+              <div class="text-xs font-semibold text-gray-200 mb-1.5">Generated Artifacts & Endpoints</div>
+              <ul class="text-xs font-mono space-y-1 text-sky-400">
+                ${d.outputs.map(o => `<li>• ${o}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="text-xs font-semibold text-gray-200 mb-1">CLI Execution Command</div>
+            <pre class="text-xs font-mono p-3 rounded-xl surface-bg border overflow-x-auto text-gray-200">${d.cmd}</pre>
+          </div>
+        </div>
+      `;
+    }
+
+    function setTab(tab) {
+      ['pipeline', 'sequence', 'sipa', 'deploy'].forEach(t => {
+        document.getElementById('tab-' + t).classList.toggle('hidden', t !== tab);
+        const btn = document.getElementById('tabBtn-' + t);
+        if (t === tab) {
+          btn.className = "px-3.5 py-2 rounded-lg text-xs font-semibold border border-emerald-500/40 bg-emerald-500/20 text-emerald-400";
+        } else {
+          btn.className = "px-3.5 py-2 rounded-lg text-xs font-semibold border border-gray-700 surface-card text-gray-400";
+        }
+      });
+    }
+
+    function updateSipaCalc() {
+      const phr = parseInt(document.getElementById('rng-phr').value, 10) / 100.0;
+      const sev = parseInt(document.getElementById('rng-sev').value, 10) / 100.0;
+      const debt = parseFloat(document.getElementById('rng-debt').value);
+
+      document.getElementById('lbl-phr').textContent = phr.toFixed(2);
+      document.getElementById('lbl-sev').textContent = sev.toFixed(2);
+      document.getElementById('lbl-debt').textContent = debt.toFixed(1) + ' J';
+
+      const sevDensity = Math.min(1.0, phr * sev);
+      const tcs = Math.max(0.0, 1.0 - phr * 0.45);
+      const debtPenalty = Math.min(1.0, debt / 60.0);
+      const pir = Math.max(0.0, Math.min(1.0, 0.45 * (1 - phr) + 0.25 * (1 - sevDensity) + 0.15 * tcs + 0.15 * (1 - debtPenalty)));
+
+      let grade = 'F';
+      let label = 'Critical';
+      let meaning = 'Physical bankruptcy; trajectory violates fundamental causality.';
+      let colorCls = 'text-red-400';
+      let badgeCls = 'w-14 h-14 rounded-xl flex items-center justify-center text-2xl font-black bg-red-500/20 text-red-400 border border-red-500/40';
+
+      if (pir >= 0.70) {
+        grade = 'A';
+        label = 'Physically Solvent';
+        meaning = 'Model respects conservation laws and contact mechanics.';
+        colorCls = 'text-emerald-400';
+        badgeCls = 'w-14 h-14 rounded-xl flex items-center justify-center text-2xl font-black bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
+      } else if (pir >= 0.30) {
+        grade = 'C';
+        label = 'Moderate Risk';
+        meaning = 'Some physical debt; may fail in novel situations.';
+        colorCls = 'text-amber-400';
+        badgeCls = 'w-14 h-14 rounded-xl flex items-center justify-center text-2xl font-black bg-amber-500/20 text-amber-400 border border-amber-500/40';
+      }
+
+      const verdict = (phr < 0.10 && pir >= 0.70) ? 'PASS' : 'FAIL';
+      document.getElementById('out-verdict').className = `text-2xl font-extrabold mt-0.5 ${colorCls}`;
+      document.getElementById('out-verdict').textContent = `${verdict} (Grade ${grade} — ${label})`;
+      document.getElementById('out-badge').className = badgeCls;
+      document.getElementById('out-badge').textContent = grade;
+      document.getElementById('out-phr').textContent = phr.toFixed(3);
+      document.getElementById('out-pir').textContent = pir.toFixed(3);
+      document.getElementById('out-meaning').textContent = meaning;
+    }
+
+    selectTier(1);
+    updateSipaCalc();
+  </script>
+</body>
+</html>

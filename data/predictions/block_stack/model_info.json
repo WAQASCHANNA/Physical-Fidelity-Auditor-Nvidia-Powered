@@ -1,0 +1,31 @@
+{
+  "model_name": "nvidia/Cosmos3-Super-Reasoner",
+  "world_generator": "nvidia/Cosmos-Predict2.5-3D",
+  "version": "3.0.0",
+  "dimension": "3D",
+  "workbench": "cosmos-3d-token-factory-emulator",
+  "scenario": "block_stack",
+  "isaac_task_id": "Isaac-Stack-Block-3D-v0",
+  "hallucination_profile": "cosmos_default",
+  "profile_label": "Cosmos-Predict2.5 / Cosmos 3 Baseline (Unconstrained 3D Rollout)",
+  "cosmos_scene_reasoning": {
+    "model": "nvidia/Cosmos3-Super-Reasoner",
+    "task_id": "Isaac-Stack-Block-3D-v0",
+    "scene_description": "A 2.5 kg 3D wooden block is placed atop a 3D support pedestal with its 3D center of mass overhanging the support polygon edge (dx=0.34 m, dy=0.08 m vs 0.25 m half-width), triggering a 3D torque-induced rotational topple onto the rigid floor.",
+    "predicted_stages": [
+      "initial_contact",
+      "dynamic_evolution",
+      "steady_state"
+    ],
+    "physical_priors_active": false,
+    "mode": "local_3d_world_emulator"
+  },
+  "inference_params": {
+    "num_frames": 101,
+    "fps": 25,
+    "conditioning_frames": 4,
+    "guidance_scale": 7.0,
+    "seed": 42
+  },
+  "ground_truth_reference": "E:\\Physical Fidleity Auditor\\data\\ground_truth\\block_stack"
+}

@@ -1,0 +1,225 @@
+{
+  "status": "completed",
+  "task": "Isaac-Lift-Cube-Franka-v0",
+  "model": "nvidia/Cosmos3-Super-Reasoner",
+  "hallucination_profile": "cosmos_default",
+  "input_path": "s3://physics-audit/ground_truth/franka_lift/frames/",
+  "output_path": "s3://physics-audit/predictions/franka_lift/",
+  "frames_evaluated": [
+    "frame_00.png",
+    "frame_01.png",
+    "frame_02.png",
+    "frame_03.png",
+    "frame_04.png",
+    "frame_05.png",
+    "frame_06.png",
+    "frame_07.png",
+    "frame_08.png",
+    "frame_09.png",
+    "frame_10.png",
+    "frame_11.png",
+    "frame_12.png",
+    "frame_13.png",
+    "frame_14.png",
+    "frame_15.png",
+    "frame_16.png",
+    "frame_17.png",
+    "frame_18.png",
+    "frame_19.png",
+    "frame_20.png",
+    "frame_21.png",
+    "frame_22.png",
+    "frame_23.png",
+    "frame_24.png"
+  ],
+  "num_frames": 25,
+  "scene_description": "3D NVIDIA Isaac Lab manipulation workspace for task 'Isaac-Lift-Cube-Franka-v0'. A 7-DOF Franka Emika Panda robotic arm mounted at (0.08, 0.00, 0.00) m interacts with a 0.10 kg red ABS plastic cube (friction mu=0.65) initially resting at (0.52, 0.08, 0.038) m on a calibrated optical table, targeting the 3D goal marker at (0.44, -0.08, 0.340) m.",
+  "manipulation_plan": [
+    {
+      "stage": "approach",
+      "frame_range": [
+        0,
+        4
+      ],
+      "action": "Descend Franka end-effector rapidly toward red cube on worktable.",
+      "predicted_cube_pose_m": [
+        0.52,
+        0.08,
+        0.038
+      ],
+      "predicted_grasp_force_n": 0.0,
+      "predicted_sdf_clearance_m": 0.0,
+      "object_visible": true
+    },
+    {
+      "stage": "pre-grasp",
+      "frame_range": [
+        5,
+        9
+      ],
+      "action": "Gripper fingers descend below z=0.0 m table plane, causing 3D mesh interpenetration with the optical table and cube.",
+      "predicted_cube_pose_m": [
+        0.52,
+        0.08,
+        -0.095
+      ],
+      "predicted_grasp_force_n": 0.0,
+      "predicted_sdf_clearance_m": -0.133,
+      "object_visible": true
+    },
+    {
+      "stage": "grasp",
+      "frame_range": [
+        10,
+        13
+      ],
+      "action": "Jaws remain partially open (F_grasp = 0.0 N < 0.755 N required hold threshold) yet cube attaches magnetically.",
+      "predicted_cube_pose_m": [
+        0.52,
+        0.08,
+        0.085
+      ],
+      "predicted_grasp_force_n": 0.0,
+      "predicted_sdf_clearance_m": 0.047,
+      "object_visible": true
+    },
+    {
+      "stage": "lift",
+      "frame_range": [
+        14,
+        19
+      ],
+      "action": "Cube levitates +0.24 m ahead of open gripper fingers without frictional contact force, violating gravity.",
+      "predicted_cube_pose_m": [
+        0.48,
+        0.18,
+        0.435
+      ],
+      "predicted_grasp_force_n": 0.0,
+      "predicted_sdf_clearance_m": 0.397,
+      "object_visible": true
+    },
+    {
+      "stage": "hold",
+      "frame_range": [
+        20,
+        24
+      ],
+      "action": "Cube flickers out of existence at frames 21-22 (object permanence failure) before re-appearing near goal.",
+      "predicted_cube_pose_m": [
+        0.44,
+        -0.08,
+        0.328
+      ],
+      "predicted_grasp_force_n": 0.0,
+      "predicted_sdf_clearance_m": 0.29,
+      "object_visible": false
+    }
+  ],
+  "analysis": {
+    "scene_summary": "3D NVIDIA Isaac Lab manipulation workspace for task 'Isaac-Lift-Cube-Franka-v0'. A 7-DOF Franka Emika Panda robotic arm mounted at (0.08, 0.00, 0.00) m interacts with a 0.10 kg red ABS plastic cube (friction mu=0.65) initially resting at (0.52, 0.08, 0.038) m on a calibrated optical table, targeting the 3D goal marker at (0.44, -0.08, 0.340) m.",
+    "detected_phases": [
+      "approach",
+      "pre-grasp",
+      "grasp",
+      "lift",
+      "hold"
+    ],
+    "manipulation_plan": [
+      {
+        "stage": "approach",
+        "frame_range": [
+          0,
+          4
+        ],
+        "action": "Descend Franka end-effector rapidly toward red cube on worktable.",
+        "predicted_cube_pose_m": [
+          0.52,
+          0.08,
+          0.038
+        ],
+        "predicted_grasp_force_n": 0.0,
+        "predicted_sdf_clearance_m": 0.0,
+        "object_visible": true
+      },
+      {
+        "stage": "pre-grasp",
+        "frame_range": [
+          5,
+          9
+        ],
+        "action": "Gripper fingers descend below z=0.0 m table plane, causing 3D mesh interpenetration with the optical table and cube.",
+        "predicted_cube_pose_m": [
+          0.52,
+          0.08,
+          -0.095
+        ],
+        "predicted_grasp_force_n": 0.0,
+        "predicted_sdf_clearance_m": -0.133,
+        "object_visible": true
+      },
+      {
+        "stage": "grasp",
+        "frame_range": [
+          10,
+          13
+        ],
+        "action": "Jaws remain partially open (F_grasp = 0.0 N < 0.755 N required hold threshold) yet cube attaches magnetically.",
+        "predicted_cube_pose_m": [
+          0.52,
+          0.08,
+          0.085
+        ],
+        "predicted_grasp_force_n": 0.0,
+        "predicted_sdf_clearance_m": 0.047,
+        "object_visible": true
+      },
+      {
+        "stage": "lift",
+        "frame_range": [
+          14,
+          19
+        ],
+        "action": "Cube levitates +0.24 m ahead of open gripper fingers without frictional contact force, violating gravity.",
+        "predicted_cube_pose_m": [
+          0.48,
+          0.18,
+          0.435
+        ],
+        "predicted_grasp_force_n": 0.0,
+        "predicted_sdf_clearance_m": 0.397,
+        "object_visible": true
+      },
+      {
+        "stage": "hold",
+        "frame_range": [
+          20,
+          24
+        ],
+        "action": "Cube flickers out of existence at frames 21-22 (object permanence failure) before re-appearing near goal.",
+        "predicted_cube_pose_m": [
+          0.44,
+          -0.08,
+          0.328
+        ],
+        "predicted_grasp_force_n": 0.0,
+        "predicted_sdf_clearance_m": 0.29,
+        "object_visible": false
+      }
+    ],
+    "physical_feasibility": {
+      "force_closure_valid": false,
+      "required_normal_force_n": 0.755,
+      "applied_grasp_force_n": 0.0,
+      "sdf_contact_clearance_valid": false
+    },
+    "predicted_next_state": "Predicted rollout exhibits pre-grasp table SDF interpenetration (-0.133 m), zero-force lift levitation, and hold-phase occlusion loss."
+  },
+  "ground_truth_reference": {
+    "object_mass_kg": 0.1,
+    "friction": 0.65,
+    "nominal_grasp_force_n": 12.0
+  },
+  "timestamp": "2026-10-30T18:01:08.450546+00:00",
+  "latency_seconds": 16.55
+}

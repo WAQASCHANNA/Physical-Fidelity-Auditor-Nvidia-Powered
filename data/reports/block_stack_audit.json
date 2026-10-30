@@ -1,0 +1,218 @@
+{
+  "scenario": "block_stack",
+  "overall_verdict": "FAIL",
+  "physics_hallucination_rate": 0.3069,
+  "physical_integrity_rating": 0.5377,
+  "temporal_consistency_score": 0.7326,
+  "kinetic_debt_joules": 47.5,
+  "total_frames": 101,
+  "violated_frames_count": 31,
+  "violations": [
+    {
+      "frame_index": 18,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 18: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.80m; predicted z=1.00m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 19,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 19: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.79m; predicted z=1.01m vs GT z=0.22m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 20,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 20: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.80m; predicted z=1.02m vs GT z=0.22m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 21,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 21: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.82m; predicted z=1.03m vs GT z=0.21m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 22,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 22: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.84m; predicted z=1.04m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 23,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 23: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.84m; predicted z=1.04m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 24,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 24: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.84m; predicted z=1.04m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 25,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 25: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.83m; predicted z=1.03m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 26,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 26: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.83m; predicted z=1.03m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 27,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 27: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.82m; predicted z=1.02m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 28,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 28: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.81m; predicted z=1.01m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 29,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 29: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.79m; predicted z=0.99m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 30,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 30: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.78m; predicted z=0.98m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 31,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 31: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.77m; predicted z=0.97m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 32,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 32: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.77m; predicted z=0.97m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 33,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 33: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.76m; predicted z=0.96m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 34,
+      "violation_type": "Gravity and free-fall behavior",
+      "description": "Frame 34: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.76m; predicted z=0.96m vs GT z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 52,
+      "violation_type": "Contact constraints",
+      "description": "Frame 52: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 53,
+      "violation_type": "Contact constraints",
+      "description": "Frame 53: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 54,
+      "violation_type": "Contact constraints",
+      "description": "Frame 54: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 55,
+      "violation_type": "Contact constraints",
+      "description": "Frame 55: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 56,
+      "violation_type": "Contact constraints",
+      "description": "Frame 56: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 57,
+      "violation_type": "Contact constraints",
+      "description": "Frame 57: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 58,
+      "violation_type": "Contact constraints",
+      "description": "Frame 58: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 59,
+      "violation_type": "Contact constraints",
+      "description": "Frame 59: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 60,
+      "violation_type": "Contact constraints",
+      "description": "Frame 60: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 76,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 76: Unforced 3D momentum/energy surge (+9.5J over Isaac Lab ground truth, exceeding restitution limit e=0.25).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 77,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 77: Unforced 3D momentum/energy surge (+9.5J over Isaac Lab ground truth, exceeding restitution limit e=0.25).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 78,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 78: Unforced 3D momentum/energy surge (+9.5J over Isaac Lab ground truth, exceeding restitution limit e=0.25).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 79,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 79: Unforced 3D momentum/energy surge (+9.5J over Isaac Lab ground truth, exceeding restitution limit e=0.25).",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 80,
+      "violation_type": "Conservation of momentum",
+      "description": "Frame 80: Unforced 3D momentum/energy surge (+9.5J over Isaac Lab ground truth, exceeding restitution limit e=0.25).",
+      "severity": "HIGH"
+    }
+  ],
+  "summary": "Scenario 'block_stack' (cosmos_default) evaluated across 101 frames: verdict=FAIL with PHR=0.307, PIR=0.538, and Kinetic Debt=47.5J. Detected 31 violated frames across laws: Conservation of momentum, Contact constraints, Gravity and free-fall behavior. Grounded against Tavily empirical constant for wood on wood (nominal mu=0.42).",
+  "model_used": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B (local-physics-judge-fallback)",
+  "escalated_to_super": false,
+  "world_model_profile": "cosmos_default",
+  "tavily_grounding": {
+    "scenario": "block_stack",
+    "query": "coefficient of static friction wood on wood physical constant",
+    "material_pair": "wood on wood",
+    "empirical_friction_range": [
+      0.25,
+      0.5
+    ],
+    "recommended_friction": 0.42,
+    "recommended_restitution": 0.25,
+    "source": "https://www.atlantis-press.com/article/55910964.pdf",
+    "content": "which has a value is 0.25-0.5 as Table 3 [8, 14]. Thus, based on this experiments, provides input that the range of static friction coefficients at wood-on-wood surface has a greater range. Using the lower limit of the physics for scientists and engineers textbook is 0.25 and using the upper limit based on this experiment is 0.55. So the static friction coefficient of wood-on-wood is 0.25 - 0.55. In addition, for this experiment we must be careful on putting the object A on the track, so that [...] a relatively long time. And from this experiments, it can provide an additional range of static friction coefficients reaching 0.55 using the lower limit in the physics for scientists and engineers textbook is 0.25. So that the range of static friction coefficients of wood-on-wood is 0.25-0.55. Keywords\u2014 static friction coefficient; comparison wood-metal load system; wood-sand load system I. INTRODUCTION Friction between two objects will make the microscopic connection at various points on the [...] both surfaces . IV. CONCLUSION Wood-sand load system (experiment 2) has better accuracy compared to wood-metal load system (experiment 1), but requires a relatively long time and better patience. Based on this experiments, it can provide an additional range of static friction coefficients reaching 0.55 using the lower limit in the physics for scientists and engineers\u2019 textbook is 0.25. So that the range of static friction coefficients of wood-on-wood is 0.25-0.55. ACKNOWLEDGMENT This paper is",
+    "retrieval_mode": "tavily_live_api (disk_cache)",
+    "raw_results_count": 2
+  },
+  "audit_latency_seconds": 73.4407
+}

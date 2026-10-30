@@ -1,0 +1,904 @@
+{
+  "project": "physics-audit",
+  "world_model_profile": "cosmos_default",
+  "scenarios_audited": 5,
+  "mean_physics_hallucination_rate": 0.2416,
+  "mean_physical_integrity_rating": 0.5881,
+  "total_kinetic_debt_joules": 1001.067,
+  "target_phr_threshold": 0.1,
+  "target_pir_threshold": 0.85,
+  "reports": {
+    "warehouse_amr": {
+      "scenario": "warehouse_amr",
+      "overall_verdict": "FAIL",
+      "physics_hallucination_rate": 0.2475,
+      "physical_integrity_rating": 0.5773,
+      "temporal_consistency_score": 0.7534,
+      "kinetic_debt_joules": 715.0,
+      "total_frames": 101,
+      "violated_frames_count": 25,
+      "violations": [
+        {
+          "frame_index": 28,
+          "violation_type": "Contact constraints",
+          "description": "Predicted AMR penetrates floor (SDF clearance = -0.057 m) at t=1.12 s, violating non-penetration",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 29,
+          "violation_type": "Contact constraints",
+          "description": "Predicted AMR penetrates floor (SDF clearance = -0.11 m) at t=1.16 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 30,
+          "violation_type": "Contact constraints",
+          "description": "Predicted AMR penetrates floor (SDF clearance = -0.156 m) at t=1.20 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 31,
+          "violation_type": "Contact constraints",
+          "description": "Predicted AMR penetrates floor (SDF clearance = -0.191 m) at t=1.24 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 32,
+          "violation_type": "Contact constraints",
+          "description": "Predicted AMR penetrates floor (SDF clearance = -0.212 m) at t=1.28 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 33,
+          "violation_type": "Contact constraints",
+          "description": "Predicted AMR penetrates floor (SDF clearance = -0.22 m) at t=1.32 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 34,
+          "violation_type": "Contact constraints",
+          "description": "Predicted AMR penetrates floor (SDF clearance = -0.212 m) at t=1.36 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 35,
+          "violation_type": "Contact constraints",
+          "description": "Predicted AMR penetrates floor (SDF clearance = -0.191 m) at t=1.40 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 36,
+          "violation_type": "Contact constraints",
+          "description": "Predicted AMR penetrates floor (SDF clearance = -0.156 m) at t=1.44 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 37,
+          "violation_type": "Contact constraints",
+          "description": "Predicted AMR penetrates floor (SDF clearance = -0.11 m) at t=1.48 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 38,
+          "violation_type": "Contact constraints",
+          "description": "Predicted AMR penetrates floor (SDF clearance = -0.057 m) at t=1.52 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 58,
+          "violation_type": "Conservation of momentum",
+          "description": "Predicted velocity jumps to 4.0 m/s while ground truth remains 1.2 m/s; energy_delta_j = 65 J at t=2.32 s, violating momentum conservation",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 59,
+          "violation_type": "Conservation of momentum",
+          "description": "Same momentum breach as frame 58 at t=2.36 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 60,
+          "violation_type": "Conservation of momentum",
+          "description": "Same momentum breach as frame 58 at t=2.40 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 61,
+          "violation_type": "Conservation of momentum",
+          "description": "Same momentum breach as frame 58 at t=2.44 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 62,
+          "violation_type": "Conservation of momentum",
+          "description": "Same momentum breach as frame 58 at t=2.48 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 63,
+          "violation_type": "Conservation of momentum",
+          "description": "Same momentum breach as frame 58 at t=2.52 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 64,
+          "violation_type": "Conservation of momentum",
+          "description": "Same momentum breach as frame 58 at t=2.56 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 65,
+          "violation_type": "Conservation of momentum",
+          "description": "Same momentum breach as frame 58 at t=2.60 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 66,
+          "violation_type": "Conservation of momentum",
+          "description": "Same momentum breach as frame 58 at t=2.64 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 67,
+          "violation_type": "Conservation of momentum",
+          "description": "Same momentum breach as frame 58 at t=2.68 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 68,
+          "violation_type": "Conservation of momentum",
+          "description": "Same momentum breach as frame 58 at t=2.72 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 82,
+          "violation_type": "Object permanence",
+          "description": "Object disappears from view (object_visible false) while ground truth remains visible at t=3.28 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 83,
+          "violation_type": "Object permanence",
+          "description": "Object disappears from view (object_visible false) while ground truth remains visible at t=3.32 s",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 84,
+          "violation_type": "Object permanence",
+          "description": "Object disappears from view (object_visible false) while ground truth remains visible at t=3.36 s",
+          "severity": "HIGH"
+        }
+      ],
+      "summary": "The predicted trajectory exhibits a physics hallucination rate of ~0.25, indicating substantial deviation from ground\u2011truth physics. Dominant failure modes are contact\u2011constraint penetration (11 frames) and momentum conservation violations (11 frames) where the AMR abruptly accelerates to 4\u202fm/s, breaking the expected rolling dynamics under a friction coefficient of 0.72 and restitution of 0.1. Additionally, three frames show object\u2011permanence loss. These breaches suggest the predictive model does not respect real\u2011world wheel\u2011floor interaction dynamics and energy\u2011momentum conservation, leading to a FAIL verdict.",
+      "model_used": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "escalated_to_super": false,
+      "world_model_profile": "cosmos_default",
+      "tavily_grounding": {
+        "scenario": "warehouse_amr",
+        "query": "coefficient of kinetic friction polyurethane wheel on sealed concrete warehouse floor",
+        "material_pair": "polyurethane AMR drive wheels on sealed warehouse concrete",
+        "empirical_friction_range": [
+          0.6,
+          0.85
+        ],
+        "recommended_friction": 0.72,
+        "recommended_restitution": 0.1,
+        "source": "https://castercity.com/wp-content/uploads/2025/10/Rubber-Vs-Polyurethane-WhitePaper-V1.2.0.1.pdf",
+        "content": "\u2022 Phase boundaries deflect and blunt crack propagation\n\u2022 Effective wear resistance = Hard phase hardness + Soft phase toughness\nThis combination cannot be achieved in homogeneous rubber.\n7\n-- 7 of 23 --\n4.4 Coefficient of Friction Impact\nSliding friction coefficients:\n\u2022 Rubber on concrete: \u03bc \u2248 0.7\u20131.0 (high adhesion)\n\u2022 Polyurethane on concrete: \u03bc \u2248 0.4\u20130.6 (lower adhesion)\nLower friction reduces tangential forces during rolling and sliding, decreasing abrasive wear rate. [...] \u2022 Offer high resilience: Rapid recovery prevents repeated hammering\n6.2 Impact Force Transmission\nImpact scenario (wheel drops onto concrete):\nKinetic energy must be absorbed by wheel deformation OR transmitted to floor as damaging\nforce.\nForce-deflection relationship:\nFpeak = Ekinetic\n\u03b4deformation\nWhere smaller deformation (\u03b4) creates higher peak force.\nSoft rubber response:\n\u2022 Deep compression (8\u201312 mm deflection under impact)\n\u2022 Absorbs 80\u201390% of energy in elastic tire deformation [...] 6\n-- 6 of 23 --\n4 Abrasive Wear Resistance\n4.1 Wear Mechanisms\n\u2022 Two-body abrasion: Wheel slides on rough floor (concrete asperities)\n\u2022 Three-body abrasion: Loose particles (sand, metal filings) trapped between wheel and\nfloor\n4.2 Archard Wear Equation\nFundamental wear relationship:\nV = K \u00d7 Fn \u00d7 s\nH\nWhere:\n\u2022 V = wear volume\n\u2022 K = wear coefficient (material dependent)\n\u2022 Fn = normal force\n\u2022 s = sliding distance\n\u2022 H = hardness\nCritical insight: Wear inversely proportional to hardness.",
+        "retrieval_mode": "tavily_live_api (disk_cache)",
+        "raw_results_count": 2
+      },
+      "audit_latency_seconds": 137.5895
+    },
+    "franka_lift_cube": {
+      "scenario": "franka_lift_cube",
+      "overall_verdict": "FAIL",
+      "physics_hallucination_rate": 0.2178,
+      "physical_integrity_rating": 0.6021,
+      "temporal_consistency_score": 0.7638,
+      "kinetic_debt_joules": 70.4,
+      "total_frames": 101,
+      "violated_frames_count": 22,
+      "violations": [
+        {
+          "frame_index": 26,
+          "violation_type": "Contact constraints",
+          "description": "Predicted z = -0.055 m (clearance -0.055 m) indicating interpenetration of ground; violates contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 27,
+          "violation_type": "Contact constraints",
+          "description": "Predicted z = -0.103 m (clearance -0.103 m) indicating interpenetration of ground; violates contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 28,
+          "violation_type": "Contact constraints",
+          "description": "Predicted z = -0.139 m (clearance -0.139 m) indicating interpenetration of ground; violates contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 29,
+          "violation_type": "Contact constraints",
+          "description": "Predicted z = -0.158 m (clearance -0.158 m) indicating interpenetration of ground; violates contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 30,
+          "violation_type": "Contact constraints",
+          "description": "Predicted z = -0.158 m (clearance -0.158 m) indicating interpenetration of ground; violates contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 31,
+          "violation_type": "Contact constraints",
+          "description": "Predicted z = -0.139 m (clearance -0.139 m) indicating interpenetration of ground; violates contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 32,
+          "violation_type": "Contact constraints",
+          "description": "Predicted z = -0.103 m (clearance -0.103 m) indicating interpenetration of ground; violates contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 33,
+          "violation_type": "Contact constraints",
+          "description": "Predicted z = 0.025 m (clearance -0.055 m) still shows slight interpenetration; violates contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 52,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Predicted vertical velocity = 2.356 m/s vs ground truth 0.556 m/s; trajectory shows unrealistic upward acceleration inconsistent with gravity; violates gravity and free-fall behavior.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 53,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Predicted vertical velocity = 2.488 m/s vs ground truth 0.688 m/s; violates gravity and free-fall behavior.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 54,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Predicted vertical velocity = 2.608 m/s vs ground truth 0.808 m/s; violates gravity and free-fall behavior.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 55,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Predicted vertical velocity = 2.716 m/s vs ground truth 0.916 m/s; violates gravity and free-fall behavior.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 56,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Predicted vertical velocity = 2.812 m/s vs ground truth 1.012 m/s; violates gravity and free-fall behavior.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 57,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Predicted vertical velocity = 2.896 m/s vs ground truth 1.096 m/s; violates gravity and free-fall behavior.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 58,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Predicted vertical velocity = 2.968 m/s vs ground truth 1.168 m/s; violates gravity and free-fall behavior.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 59,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Predicted vertical velocity = 3.028 m/s vs ground truth 1.228 m/s; violates gravity and free-fall behavior.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 60,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Predicted vertical velocity = 3.076 m/s vs ground truth 1.276 m/s; violates gravity and free-fall behavior.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 61,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Predicted vertical velocity = 3.112 m/s vs ground truth 1.312 m/s; violates gravity and free-fall behavior.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 62,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Predicted vertical velocity = 3.136 m/s vs ground truth 1.336 m/s; violates gravity and free-fall behavior.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 84,
+          "violation_type": "Object permanence",
+          "description": "Object_visible flag false in prediction while ground truth shows true; violates object permanence.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 85,
+          "violation_type": "Object permanence",
+          "description": "Object_visible flag false in prediction while ground truth shows true; violates object permanence.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 86,
+          "violation_type": "Object permanence",
+          "description": "Object_visible flag false in prediction while ground truth shows true; violates object permanence.",
+          "severity": "HIGH"
+        }
+      ],
+      "summary": "The predicted trajectory exhibits a physics hallucination rate of ~0.218, indicating substantial physical implausibility. Dominant failure modes are contact constraint violations (penetration of the cube through the ground) and unrealistic gravity\u2011free\u2011fall dynamics (excessive upward velocities). Object permanence errors also appear when the cube disappears in later frames. While the recommended friction coefficient (0.65) aligns with the empirical range, the predicted behavior suggests inadequate damping and unrealistic energy dynamics, leading to a FAIL verdict.",
+      "model_used": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "escalated_to_super": false,
+      "world_model_profile": "cosmos_default",
+      "tavily_grounding": {
+        "scenario": "franka_lift_cube",
+        "query": "coefficient of static friction rubber on ABS plastic robotic gripper physical constant",
+        "material_pair": "rubber gripper pads on ABS plastic cube",
+        "empirical_friction_range": [
+          0.55,
+          0.75
+        ],
+        "recommended_friction": 0.65,
+        "recommended_restitution": 0.15,
+        "source": "https://eureka.patsnap.com/report-evaluate-friction-coefficients-of-silicon-based-robot-skins",
+        "content": "Apr 17, 2026 \u2014 The friction coefficient serves as a quantitative measure that directly influences a robot's ability to grasp objects, navigate surfaces, and\u00a0...Read more",
+        "retrieval_mode": "tavily_live_api",
+        "raw_results_count": 2
+      },
+      "audit_latency_seconds": 47.7889
+    },
+    "block_stack": {
+      "scenario": "block_stack",
+      "overall_verdict": "FAIL",
+      "physics_hallucination_rate": 0.3069,
+      "physical_integrity_rating": 0.5377,
+      "temporal_consistency_score": 0.7326,
+      "kinetic_debt_joules": 47.5,
+      "total_frames": 101,
+      "violated_frames_count": 31,
+      "violations": [
+        {
+          "frame_index": 18,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 18: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.80m; predicted z=1.00m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 19,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 19: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.79m; predicted z=1.01m vs GT z=0.22m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 20,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 20: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.80m; predicted z=1.02m vs GT z=0.22m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 21,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 21: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.82m; predicted z=1.03m vs GT z=0.21m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 22,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 22: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.84m; predicted z=1.04m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 23,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 23: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.84m; predicted z=1.04m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 24,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 24: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.84m; predicted z=1.04m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 25,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 25: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.83m; predicted z=1.03m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 26,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 26: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.83m; predicted z=1.03m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 27,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 27: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.82m; predicted z=1.02m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 28,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 28: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.81m; predicted z=1.01m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 29,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 29: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.79m; predicted z=0.99m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 30,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 30: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.78m; predicted z=0.98m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 31,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 31: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.77m; predicted z=0.97m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 32,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 32: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.77m; predicted z=0.97m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 33,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 33: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.76m; predicted z=0.96m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 34,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 34: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.76m; predicted z=0.96m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 52,
+          "violation_type": "Contact constraints",
+          "description": "Frame 52: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 53,
+          "violation_type": "Contact constraints",
+          "description": "Frame 53: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 54,
+          "violation_type": "Contact constraints",
+          "description": "Frame 54: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 55,
+          "violation_type": "Contact constraints",
+          "description": "Frame 55: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 56,
+          "violation_type": "Contact constraints",
+          "description": "Frame 56: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 57,
+          "violation_type": "Contact constraints",
+          "description": "Frame 57: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 58,
+          "violation_type": "Contact constraints",
+          "description": "Frame 58: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 59,
+          "violation_type": "Contact constraints",
+          "description": "Frame 59: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 60,
+          "violation_type": "Contact constraints",
+          "description": "Frame 60: 3D mesh interpenetrates solid collider boundary by 0.26m (SDF=-0.26m, predicted z=-0.06m vs Isaac Lab z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 76,
+          "violation_type": "Conservation of momentum",
+          "description": "Frame 76: Unforced 3D momentum/energy surge (+9.5J over Isaac Lab ground truth, exceeding restitution limit e=0.25).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 77,
+          "violation_type": "Conservation of momentum",
+          "description": "Frame 77: Unforced 3D momentum/energy surge (+9.5J over Isaac Lab ground truth, exceeding restitution limit e=0.25).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 78,
+          "violation_type": "Conservation of momentum",
+          "description": "Frame 78: Unforced 3D momentum/energy surge (+9.5J over Isaac Lab ground truth, exceeding restitution limit e=0.25).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 79,
+          "violation_type": "Conservation of momentum",
+          "description": "Frame 79: Unforced 3D momentum/energy surge (+9.5J over Isaac Lab ground truth, exceeding restitution limit e=0.25).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 80,
+          "violation_type": "Conservation of momentum",
+          "description": "Frame 80: Unforced 3D momentum/energy surge (+9.5J over Isaac Lab ground truth, exceeding restitution limit e=0.25).",
+          "severity": "HIGH"
+        }
+      ],
+      "summary": "Scenario 'block_stack' (cosmos_default) evaluated across 101 frames: verdict=FAIL with PHR=0.307, PIR=0.538, and Kinetic Debt=47.5J. Detected 31 violated frames across laws: Conservation of momentum, Contact constraints, Gravity and free-fall behavior. Grounded against Tavily empirical constant for wood on wood (nominal mu=0.42).",
+      "model_used": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B (local-physics-judge-fallback)",
+      "escalated_to_super": false,
+      "world_model_profile": "cosmos_default",
+      "tavily_grounding": {
+        "scenario": "block_stack",
+        "query": "coefficient of static friction wood on wood physical constant",
+        "material_pair": "wood on wood",
+        "empirical_friction_range": [
+          0.25,
+          0.5
+        ],
+        "recommended_friction": 0.42,
+        "recommended_restitution": 0.25,
+        "source": "https://www.atlantis-press.com/article/55910964.pdf",
+        "content": "which has a value is 0.25-0.5 as Table 3 [8, 14]. Thus, based on this experiments, provides input that the range of static friction coefficients at wood-on-wood surface has a greater range. Using the lower limit of the physics for scientists and engineers textbook is 0.25 and using the upper limit based on this experiment is 0.55. So the static friction coefficient of wood-on-wood is 0.25 - 0.55. In addition, for this experiment we must be careful on putting the object A on the track, so that [...] a relatively long time. And from this experiments, it can provide an additional range of static friction coefficients reaching 0.55 using the lower limit in the physics for scientists and engineers textbook is 0.25. So that the range of static friction coefficients of wood-on-wood is 0.25-0.55. Keywords\u2014 static friction coefficient; comparison wood-metal load system; wood-sand load system I. INTRODUCTION Friction between two objects will make the microscopic connection at various points on the [...] both surfaces . IV. CONCLUSION Wood-sand load system (experiment 2) has better accuracy compared to wood-metal load system (experiment 1), but requires a relatively long time and better patience. Based on this experiments, it can provide an additional range of static friction coefficients reaching 0.55 using the lower limit in the physics for scientists and engineers\u2019 textbook is 0.25. So that the range of static friction coefficients of wood-on-wood is 0.25-0.55. ACKNOWLEDGMENT This paper is",
+        "retrieval_mode": "tavily_live_api (disk_cache)",
+        "raw_results_count": 2
+      },
+      "audit_latency_seconds": 73.4407
+    },
+    "projectile": {
+      "scenario": "projectile",
+      "overall_verdict": "FAIL",
+      "physics_hallucination_rate": 0.2277,
+      "physical_integrity_rating": 0.5974,
+      "temporal_consistency_score": 0.7603,
+      "kinetic_debt_joules": 93.367,
+      "total_frames": 101,
+      "violated_frames_count": 23,
+      "violations": [
+        {
+          "frame_index": 22,
+          "violation_type": "Conservation of momentum",
+          "description": "Frame 22: Unforced 3D momentum/energy surge (+5.2J over Isaac Lab ground truth, exceeding restitution limit e=0.68).",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 23,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 23: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.18m; predicted z=1.22m vs GT z=1.05m).",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 24,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 24: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.25m; predicted z=1.14m vs GT z=0.89m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 25,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 25: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.31m; predicted z=1.02m vs GT z=0.71m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 26,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 26: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.36m; predicted z=0.87m vs GT z=0.51m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 27,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 27: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.38m; predicted z=0.68m vs GT z=0.30m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 28,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 28: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.38m; predicted z=0.53m vs GT z=0.15m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 29,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 29: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.36m; predicted z=0.64m vs GT z=0.29m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 30,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 30: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.31m; predicted z=0.72m vs GT z=0.41m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 31,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 31: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.25m; predicted z=0.77m vs GT z=0.52m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 32,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 32: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.18m; predicted z=0.78m vs GT z=0.61m).",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 33,
+          "violation_type": "Conservation of momentum",
+          "description": "Frame 33: Unforced 3D momentum/energy surge (+5.2J over Isaac Lab ground truth, exceeding restitution limit e=0.68).",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 55,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 55: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.69m vs GT z=0.37m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 56,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 56: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.65m vs GT z=0.33m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 57,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 57: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.59m vs GT z=0.27m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 58,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 58: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.52m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 59,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 59: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.47m vs GT z=0.15m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 60,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 60: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.52m vs GT z=0.20m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 61,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 61: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.54m vs GT z=0.22m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 62,
+          "violation_type": "Gravity and free-fall behavior",
+          "description": "Frame 62: 3D rigid body defies 9.81 m/s^2 gravitational acceleration (vertical altitude excess +0.32m; predicted z=0.56m vs GT z=0.24m).",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 82,
+          "violation_type": "Object permanence",
+          "description": "Frame 82: Tracked 3D rigid body vanishes from predicted scene while present at 3D pose (x=11.43m, y=3.37m, z=0.15m) in Isaac Lab ground truth.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 83,
+          "violation_type": "Object permanence",
+          "description": "Frame 83: Tracked 3D rigid body vanishes from predicted scene while present at 3D pose (x=11.48m, y=3.38m, z=0.15m) in Isaac Lab ground truth.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 84,
+          "violation_type": "Object permanence",
+          "description": "Frame 84: Tracked 3D rigid body vanishes from predicted scene while present at 3D pose (x=11.53m, y=3.40m, z=0.15m) in Isaac Lab ground truth.",
+          "severity": "HIGH"
+        }
+      ],
+      "summary": "Scenario 'projectile' (cosmos_default) evaluated across 101 frames: verdict=FAIL with PHR=0.228, PIR=0.597, and Kinetic Debt=93.4J. Detected 23 violated frames across laws: Conservation of momentum, Gravity and free-fall behavior, Object permanence. Grounded against Tavily empirical constant for steel on concrete (nominal mu=0.45).",
+      "model_used": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B (local-physics-judge-fallback)",
+      "escalated_to_super": false,
+      "world_model_profile": "cosmos_default",
+      "tavily_grounding": {
+        "scenario": "projectile",
+        "query": "coefficient of restitution and friction steel on concrete physical constant",
+        "material_pair": "steel on concrete",
+        "empirical_friction_range": [
+          0.4,
+          0.55
+        ],
+        "recommended_friction": 0.45,
+        "recommended_restitution": 0.68,
+        "source": "https://en.wikipedia.org/wiki/Coefficient_of_restitution",
+        "content": "In classical mechanics, the coefficient of restitution (COR, also denoted by e), is a measure of the springiness of collisions between two surfaces. Newton's law of restitution states that the relative speed of separation of two surfaces immediately after a collision is directly proportional to the relative speed of approach of the surfaces immediately before the collision, the constant of proportionality being called the coefficient of restitution, a dimensionless parameter that is a property [...] {E_{\\text{k, (after impact)}}}{E_{\\text{k, (before impact)}}}}}={\\sqrt {\\frac {{\\frac {1}{2}}mv^{2}}{{\\frac {1}{2}}mu^{2}}}}={\\sqrt {\\frac {v^{2}}{u^{2}}}}={\\frac {v}{u}}}In a case where frictional forces can be neglected (nearly every student laboratory on this subject), and the object is dropped from rest onto a horizontal surface, the above is equivalent to a comparison between the Ep of the object at the drop height with that at the bounce height. In this case, the change in Ek is zero (the [...] 1687.{\\displaystyle {\\text{Coefficient  of  restitution }}(e)={\\frac {\\left|{\\text{Relative velocity of separation after collision}}\\right|}{\\left|{\\text{Relative velocity of approach before collision}}\\right|}}}",
+        "retrieval_mode": "tavily_live_api (disk_cache)",
+        "raw_results_count": 2
+      },
+      "audit_latency_seconds": 30.847
+    },
+    "ramp_roll": {
+      "scenario": "ramp_roll",
+      "overall_verdict": "FAIL",
+      "physics_hallucination_rate": 0.2079,
+      "physical_integrity_rating": 0.626,
+      "temporal_consistency_score": 0.7672,
+      "kinetic_debt_joules": 74.8,
+      "total_frames": 101,
+      "violated_frames_count": 21,
+      "violations": [
+        {
+          "frame_index": 28,
+          "violation_type": "Contact constraints",
+          "description": "Frame 28: predicted z-position 1.132\u202fm vs GT 1.214\u202fm; SDF clearance -0.082\u202fm indicates interpenetration, violating contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 29,
+          "violation_type": "Contact constraints",
+          "description": "Frame 29: predicted z-position 1.012\u202fm vs GT 1.166\u202fm; SDF clearance -0.154\u202fm indicates interpenetration, violating contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 30,
+          "violation_type": "Contact constraints",
+          "description": "Frame 30: predicted z-position 0.909\u202fm vs GT 1.117\u202fm; SDF clearance -0.208\u202fm indicates interpenetration, violating contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 31,
+          "violation_type": "Contact constraints",
+          "description": "Frame 31: predicted z-position 0.831\u202fm vs GT 1.067\u202fm; SDF clearance -0.236\u202fm indicates interpenetration, violating contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 32,
+          "violation_type": "Contact constraints",
+          "description": "Frame 32: predicted z-position 0.779\u202fm vs GT 1.015\u202fm; SDF clearance -0.236\u202fm indicates interpenetration, violating contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 33,
+          "violation_type": "Contact constraints",
+          "description": "Frame 33: predicted z-position 0.755\u202fm vs GT 0.962\u202fm; SDF clearance -0.208\u202fm indicates interpenetration, violating contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 34,
+          "violation_type": "Contact constraints",
+          "description": "Frame 34: predicted z-position 0.754\u202fm vs GT 0.908\u202fm; SDF clearance -0.154\u202fm indicates interpenetration, violating contact constraints.",
+          "severity": "HIGH"
+        },
+        {
+          "frame_index": 64,
+          "violation_type": "Friction and damping behavior",
+          "description": "Frame 64: predicted velocity 3.642\u202fm/s vs GT 1.992\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 65,
+          "violation_type": "Friction and damping behavior",
+          "description": "Frame 65: predicted velocity 3.537\u202fm/s vs GT 1.887\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 66,
+          "violation_type": "Friction and damping behavior",
+          "description": "Frame 66: predicted velocity 3.432\u202fm/s vs GT 1.782\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 67,
+          "violation_type": "Friction and damping behavior",
+          "description": "Frame 67: predicted velocity 3.328\u202fm/s vs GT 1.678\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 68,
+          "violation_type": "Friction and damping behavior",
+          "description": "Frame 68: predicted velocity 3.225\u202fm/s vs GT 1.575\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 69,
+          "violation_type": "Friction and damping behavior",
+          "description": "Frame 69: predicted velocity 3.123\u202fm/s vs GT 1.472\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 70,
+          "violation_type": "Friction and damping behavior",
+          "description": "Frame 70: predicted velocity 3.021\u202fm/s vs GT 1.371\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 71,
+          "violation_type": "Friction and damping behavior",
+          "description": "Frame 71: predicted velocity 2.921\u202fm/s vs GT 1.271\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 72,
+          "violation_type": "Friction and damping behavior",
+          "description": "Frame 72: predicted velocity 2.821\u202fm/s vs GT 1.171\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 73,
+          "violation_type": "Friction and damping behavior",
+          "description": "Frame 73: predicted velocity 2.723\u202fm/s vs GT 1.073\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 74,
+          "violation_type": "Friction and damping behavior",
+          "description": "Frame 74: predicted velocity 2.625\u202fm/s vs GT 0.975\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+          "severity": "MEDIUM"
+        },
+        {
+          "frame_index": 85,
+          "violation_type": "Object permanence",
+          "description": "Frame 85: object_visible becomes false, indicating the object disappears, violating object permanence.",
+          "severity": "LOW"
+        },
+        {
+          "frame_index": 86,
+          "violation_type": "Object permanence",
+          "description": "Frame 86: object_visible remains false, continuing disappearance, violating object permanence.",
+          "severity": "LOW"
+        },
+        {
+          "frame_index": 87,
+          "violation_type": "Object permanence",
+          "description": "Frame 87: object_visible remains false, continuing disappearance, violating object permanence.",
+          "severity": "LOW"
+        }
+      ],
+      "summary": "The predicted trajectory exhibits a physics hallucination rate of ~0.208, driven primarily by contact\u2011constraint violations (7 frames) and unrealistic friction/damping energy surges (11 frames). Minor object\u2011permanence lapses occur in 3 frames. These failures indicate the model does not respect realistic momentum conservation, interpenetration limits, or energy dissipation on a ramp. The observed energy spikes conflict with the expected low\u2011friction (\u03bc\u22480.5) and restitution (e\u22480.45) constants for rubber on dry wood, confirming a mis\u2011alignment with real\u2011world physical parameters.",
+      "model_used": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "escalated_to_super": false,
+      "world_model_profile": "cosmos_default",
+      "tavily_grounding": {
+        "scenario": "ramp_roll",
+        "query": "coefficient of kinetic friction rubber on dry wood physical constant",
+        "material_pair": "rubber on dry wood",
+        "empirical_friction_range": [
+          0.45,
+          0.65
+        ],
+        "recommended_friction": 0.5,
+        "recommended_restitution": 0.45,
+        "source": "https://web.mae.ufl.edu/designlab/Class%20Projects/Background%20Information/Friction%20coefficients.htm",
+        "content": "|  |  |\n --- |\n| Material Combination | Static Friction Coefficient |\n| soft rubber on dry concrete | 0.85 |\n| hard rubber on dry concrete | 0.6 |\n| soft plastic on dry concrete | 0.6 |\n| hard plastic on dry concrete | 0.3 |\n| soft rubber on dry wood | 0.95 |\n| hard rubber on dry wood | 0.7 |\n| soft plastic on dry wood | 0.7 |\n| hard plastic on dry wood |  | [...] After reviewing the links referenced above you should be able to conclude the friction coefficient for typical plastics on concrete is roughly half the value for dry and clean rubber on concrete, as summarized in the following table.\n\n \n\nFriction Coefficient Summary Table: [...] Friction coefficients between different wheel/tire materials and concrete\n\n \n\n \n\nYou can find good background information on friction here.\n\n \n\nHere is an excellent discussion on friction coefficients, plus a comprehensive table of friction coefficients.\n\n \n\n \n\nFigure 1: Static vs dynamic friction\n\n \n\n \n\nFriction coefficients of thermoplastics against steel.\n\n \n\nFriction coefficients for common material combinations.",
+        "retrieval_mode": "tavily_live_api (disk_cache)",
+        "raw_results_count": 2
+      },
+      "audit_latency_seconds": 30.9631
+    }
+  }
+}

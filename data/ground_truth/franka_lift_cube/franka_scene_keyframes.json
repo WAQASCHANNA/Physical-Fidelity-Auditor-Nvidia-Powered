@@ -1,0 +1,12 @@
+{
+  "task": "Isaac-Lift-Cube-Franka-v0",
+  "stages": {
+    "approach": "data\\ground_truth\\franka_lift_cube\\frames\\frame_010.png",
+    "pre_grasp": "data\\ground_truth\\franka_lift_cube\\frames\\frame_028.png",
+    "grasp": "data\\ground_truth\\franka_lift_cube\\frames\\frame_042.png",
+    "lift": "data\\ground_truth\\franka_lift_cube\\frames\\frame_064.png",
+    "hold": "data\\ground_truth\\franka_lift_cube\\frames\\frame_090.png"
+  },
+  "trajectory_csv": "data\\ground_truth\\franka_lift_cube\\trajectory.csv",
+  "metadata_json": "data\\ground_truth\\franka_lift_cube\\metadata.json"
+}

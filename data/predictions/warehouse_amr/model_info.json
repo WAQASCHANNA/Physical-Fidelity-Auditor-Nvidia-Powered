@@ -1,0 +1,31 @@
+{
+  "model_name": "nvidia/Cosmos3-Super-Reasoner",
+  "world_generator": "nvidia/Cosmos-Predict2.5-3D",
+  "version": "3.0.0",
+  "dimension": "3D",
+  "workbench": "cosmos-3d-token-factory-emulator",
+  "scenario": "warehouse_amr",
+  "isaac_task_id": "Isaac-Warehouse-AMR-Nav-v0",
+  "hallucination_profile": "cosmos_default",
+  "profile_label": "Cosmos-Predict2.5 / Cosmos 3 Baseline (Unconstrained 3D Rollout)",
+  "cosmos_scene_reasoning": {
+    "model": "nvidia/Cosmos3-Super-Reasoner",
+    "task_id": "Isaac-Warehouse-AMR-Nav-v0",
+    "scene_description": "Autonomous Mobile Robot (Robot 01, 45.0 kg) navigates a 3D warehouse aisle between Rack_A..C and Forklift_01 toward Goal_01 at 1.20 m/s using 360-degree Lidar_01 and front/rear RGB cameras.",
+    "predicted_stages": [
+      "initial_contact",
+      "dynamic_evolution",
+      "steady_state"
+    ],
+    "physical_priors_active": false,
+    "mode": "local_3d_world_emulator"
+  },
+  "inference_params": {
+    "num_frames": 101,
+    "fps": 25,
+    "conditioning_frames": 4,
+    "guidance_scale": 7.0,
+    "seed": 42
+  },
+  "ground_truth_reference": "E:\\Physical Fidleity Auditor\\data\\ground_truth\\warehouse_amr"
+}

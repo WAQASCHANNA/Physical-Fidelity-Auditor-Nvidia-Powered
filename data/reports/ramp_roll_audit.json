@@ -1,0 +1,158 @@
+{
+  "scenario": "ramp_roll",
+  "overall_verdict": "FAIL",
+  "physics_hallucination_rate": 0.2079,
+  "physical_integrity_rating": 0.626,
+  "temporal_consistency_score": 0.7672,
+  "kinetic_debt_joules": 74.8,
+  "total_frames": 101,
+  "violated_frames_count": 21,
+  "violations": [
+    {
+      "frame_index": 28,
+      "violation_type": "Contact constraints",
+      "description": "Frame 28: predicted z-position 1.132\u202fm vs GT 1.214\u202fm; SDF clearance -0.082\u202fm indicates interpenetration, violating contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 29,
+      "violation_type": "Contact constraints",
+      "description": "Frame 29: predicted z-position 1.012\u202fm vs GT 1.166\u202fm; SDF clearance -0.154\u202fm indicates interpenetration, violating contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 30,
+      "violation_type": "Contact constraints",
+      "description": "Frame 30: predicted z-position 0.909\u202fm vs GT 1.117\u202fm; SDF clearance -0.208\u202fm indicates interpenetration, violating contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 31,
+      "violation_type": "Contact constraints",
+      "description": "Frame 31: predicted z-position 0.831\u202fm vs GT 1.067\u202fm; SDF clearance -0.236\u202fm indicates interpenetration, violating contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 32,
+      "violation_type": "Contact constraints",
+      "description": "Frame 32: predicted z-position 0.779\u202fm vs GT 1.015\u202fm; SDF clearance -0.236\u202fm indicates interpenetration, violating contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 33,
+      "violation_type": "Contact constraints",
+      "description": "Frame 33: predicted z-position 0.755\u202fm vs GT 0.962\u202fm; SDF clearance -0.208\u202fm indicates interpenetration, violating contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 34,
+      "violation_type": "Contact constraints",
+      "description": "Frame 34: predicted z-position 0.754\u202fm vs GT 0.908\u202fm; SDF clearance -0.154\u202fm indicates interpenetration, violating contact constraints.",
+      "severity": "HIGH"
+    },
+    {
+      "frame_index": 64,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 64: predicted velocity 3.642\u202fm/s vs GT 1.992\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 65,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 65: predicted velocity 3.537\u202fm/s vs GT 1.887\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 66,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 66: predicted velocity 3.432\u202fm/s vs GT 1.782\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 67,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 67: predicted velocity 3.328\u202fm/s vs GT 1.678\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 68,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 68: predicted velocity 3.225\u202fm/s vs GT 1.575\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 69,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 69: predicted velocity 3.123\u202fm/s vs GT 1.472\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 70,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 70: predicted velocity 3.021\u202fm/s vs GT 1.371\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 71,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 71: predicted velocity 2.921\u202fm/s vs GT 1.271\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 72,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 72: predicted velocity 2.821\u202fm/s vs GT 1.171\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 73,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 73: predicted velocity 2.723\u202fm/s vs GT 1.073\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 74,
+      "violation_type": "Friction and damping behavior",
+      "description": "Frame 74: predicted velocity 2.625\u202fm/s vs GT 0.975\u202fm/s; energy_delta_j = 6.8\u202fJ indicates unrealistic kinetic energy, violating friction/damping expectations.",
+      "severity": "MEDIUM"
+    },
+    {
+      "frame_index": 85,
+      "violation_type": "Object permanence",
+      "description": "Frame 85: object_visible becomes false, indicating the object disappears, violating object permanence.",
+      "severity": "LOW"
+    },
+    {
+      "frame_index": 86,
+      "violation_type": "Object permanence",
+      "description": "Frame 86: object_visible remains false, continuing disappearance, violating object permanence.",
+      "severity": "LOW"
+    },
+    {
+      "frame_index": 87,
+      "violation_type": "Object permanence",
+      "description": "Frame 87: object_visible remains false, continuing disappearance, violating object permanence.",
+      "severity": "LOW"
+    }
+  ],
+  "summary": "The predicted trajectory exhibits a physics hallucination rate of ~0.208, driven primarily by contact\u2011constraint violations (7 frames) and unrealistic friction/damping energy surges (11 frames). Minor object\u2011permanence lapses occur in 3 frames. These failures indicate the model does not respect realistic momentum conservation, interpenetration limits, or energy dissipation on a ramp. The observed energy spikes conflict with the expected low\u2011friction (\u03bc\u22480.5) and restitution (e\u22480.45) constants for rubber on dry wood, confirming a mis\u2011alignment with real\u2011world physical parameters.",
+  "model_used": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "escalated_to_super": false,
+  "world_model_profile": "cosmos_default",
+  "tavily_grounding": {
+    "scenario": "ramp_roll",
+    "query": "coefficient of kinetic friction rubber on dry wood physical constant",
+    "material_pair": "rubber on dry wood",
+    "empirical_friction_range": [
+      0.45,
+      0.65
+    ],
+    "recommended_friction": 0.5,
+    "recommended_restitution": 0.45,
+    "source": "https://web.mae.ufl.edu/designlab/Class%20Projects/Background%20Information/Friction%20coefficients.htm",
+    "content": "|  |  |\n --- |\n| Material Combination | Static Friction Coefficient |\n| soft rubber on dry concrete | 0.85 |\n| hard rubber on dry concrete | 0.6 |\n| soft plastic on dry concrete | 0.6 |\n| hard plastic on dry concrete | 0.3 |\n| soft rubber on dry wood | 0.95 |\n| hard rubber on dry wood | 0.7 |\n| soft plastic on dry wood | 0.7 |\n| hard plastic on dry wood |  | [...] After reviewing the links referenced above you should be able to conclude the friction coefficient for typical plastics on concrete is roughly half the value for dry and clean rubber on concrete, as summarized in the following table.\n\n \n\nFriction Coefficient Summary Table: [...] Friction coefficients between different wheel/tire materials and concrete\n\n \n\n \n\nYou can find good background information on friction here.\n\n \n\nHere is an excellent discussion on friction coefficients, plus a comprehensive table of friction coefficients.\n\n \n\n \n\nFigure 1: Static vs dynamic friction\n\n \n\n \n\nFriction coefficients of thermoplastics against steel.\n\n \n\nFriction coefficients for common material combinations.",
+    "retrieval_mode": "tavily_live_api (disk_cache)",
+    "raw_results_count": 2
+  },
+  "audit_latency_seconds": 30.9631
+}

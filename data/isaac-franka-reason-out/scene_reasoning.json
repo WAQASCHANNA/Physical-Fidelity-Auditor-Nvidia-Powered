@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "task": "Isaac-Lift-Cube-Franka-v0",
+  "input_path": "docs\\assets\\hackathon\\isaac-franka-lift-cube",
+  "frames_evaluated": [
+    "frame_00.png",
+    "frame_01.png",
+    "frame_02.png",
+    "frame_03.png",
+    "frame_04.png"
+  ],
+  "num_frames": 5,
+  "model": "nvidia/Cosmos3-Super-Reasoner",
+  "endpoint": "https://api.tokenfactory.nebius.com/v1/",
+  "provider_status": "local_3d_scene_reasoner_fallback",
+  "latency_seconds": 7.294,
+  "analysis": {
+    "scene_summary": "7-DOF Franka Emika Panda manipulator approaches the 0.10 kg red target cube at (0.52, 0.08, 0.038) m, aligns parallel-jaw elastomer fingers in pre-grasp, establishes a 12.0 N force-closure grasp (exceeding the 0.75 N minimum slip threshold for mu=0.65), and smoothly lifts the cube to the 3D goal pose (0.44, -0.08, 0.34) m without table or finger interpenetration.",
+    "detected_phases": [
+      "approach",
+      "pre-grasp",
+      "grasp",
+      "lift",
+      "hold"
+    ],
+    "physical_feasibility": {
+      "force_closure_valid": true,
+      "required_normal_force_n": 0.755,
+      "applied_grasp_force_n": 12.0,
+      "sdf_contact_clearance_valid": true
+    },
+    "predicted_next_state": "Static 3D hold equilibrium at goal pose (0.44, -0.08, 0.34) m with zero vertical slip."
+  }
+}
